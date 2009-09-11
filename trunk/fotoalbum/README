@@ -1,2 +1,32 @@
+2009/09/11 
+-- Adatbazis felepitese --
+
+++++++++++++++++++++++++
++        images        +
++----------------------+
++ id (int) auto_inc    +
++ albumID (int)        +
++ path (varchar)       +
++ name (varchar)       +
++ created (varchar 20) +
++ updated (varchar 20) +
++ deleted (int) 0      +
+++++++++++++++++++++++++
+
+++++++++++++++++++++++
++       albums       +
++--------------------+
++ id (int) auto_inc  +
++ name (varchar)     +
++ created (varchar)  +
++ updated (varchar)  +
++ deleted (int) 0    +
+++++++++++++++++++++++
+
+SQLite:
+CREATE TABLE images (albumID int, created varchar(20), deleted int(1) default 0, id INTEGER PRIMARY KEY, name varchar(100), path varchar(150), updated varchar(20));
+
+CREATE TABLE albums ( created varchar(20), deleted int(1) default 0, id INTEGER PRIMARY KEY, name varchar(100), updated varchar(20));
+
 --
 csak egy proba - iM (2009/09/09)
