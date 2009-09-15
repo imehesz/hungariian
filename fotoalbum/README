@@ -1,3 +1,66 @@
+2009/09/14
+-- WEB alkalmazas elkeszitese --
+./yii/framework/yiic webapp fotoalbum
+Create a Web application under '/var/www/fotoalbum'? [Yes|No] Y
+      mkdir /var/www/fotoalbum/themes
+      mkdir /var/www/fotoalbum/themes/classic
+      mkdir /var/www/fotoalbum/themes/classic/views
+      mkdir /var/www/fotoalbum/themes/classic/views/layouts
+   generate themes/classic/views/layouts/.yii
+      mkdir /var/www/fotoalbum/themes/classic/views/system
+   generate themes/classic/views/system/.yii
+   generate themes/classic/views/.htaccess
+      mkdir /var/www/fotoalbum/themes/classic/views/site
+   generate themes/classic/views/site/.yii
+   generate index.php
+      mkdir /var/www/fotoalbum/css
+   generate css/bg.gif
+   generate css/form.css
+   generate css/main.css
+      mkdir /var/www/fotoalbum/assets
+   generate assets/.yii
+      mkdir /var/www/fotoalbum/images
+   generate images/.yii
+      mkdir /var/www/fotoalbum/protected
+      mkdir /var/www/fotoalbum/protected/extensions
+   generate protected/extensions/.yii
+   generate protected/yiic.bat
+      mkdir /var/www/fotoalbum/protected/models
+   generate protected/models/LoginForm.php
+   generate protected/models/ContactForm.php
+   generate protected/yiic.php
+      mkdir /var/www/fotoalbum/protected/controllers
+   generate protected/controllers/SiteController.php
+   generate protected/yiic
+      mkdir /var/www/fotoalbum/protected/config
+   generate protected/config/main.php
+   generate protected/config/console.php
+      mkdir /var/www/fotoalbum/protected/commands
+      mkdir /var/www/fotoalbum/protected/commands/shell
+   generate protected/commands/shell/.yii
+      mkdir /var/www/fotoalbum/protected/messages
+   generate protected/messages/.yii
+   generate protected/.htaccess
+      mkdir /var/www/fotoalbum/protected/views
+      mkdir /var/www/fotoalbum/protected/views/layouts
+   generate protected/views/layouts/main.php
+      mkdir /var/www/fotoalbum/protected/views/system
+   generate protected/views/system/.yii
+      mkdir /var/www/fotoalbum/protected/views/site
+   generate protected/views/site/login.php
+   generate protected/views/site/index.php
+   generate protected/views/site/contact.php
+      mkdir /var/www/fotoalbum/protected/runtime
+   generate protected/runtime/.yii
+      mkdir /var/www/fotoalbum/protected/components
+      mkdir /var/www/fotoalbum/protected/components/views
+   generate protected/components/views/mainMenu.php
+   generate protected/components/MainMenu.php
+   generate protected/components/UserIdentity.php
+
+Your application has been created successfully under /var/www/fotoalbum.
+
+
 2009/09/11 
 -- Adatbazis felepitese --
 
