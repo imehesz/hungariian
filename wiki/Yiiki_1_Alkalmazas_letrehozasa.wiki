@@ -1,0 +1,80 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+imehesz@imehesz-laptop:/var/www$ ./yii/framework/yiic webapp yiiki
+Create a Web application under '/var/www/yiiki'? [Yes|No] yes
+      mkdir /var/www/yiiki
+      mkdir /var/www/yiiki/themes
+      mkdir /var/www/yiiki/themes/classic
+      mkdir /var/www/yiiki/themes/classic/views
+      mkdir /var/www/yiiki/themes/classic/views/layouts
+      mkdir /var/www/yiiki/themes/classic/views/system
+   generate themes/classic/views/.htaccess
+      mkdir /var/www/yiiki/themes/classic/views/site
+   generate index.php
+      mkdir /var/www/yiiki/css
+   generate css/bg.gif
+   generate css/form.css
+   generate css/screen.css
+   generate css/main.css
+   generate css/ie.css
+   generate css/print.css
+      mkdir /var/www/yiiki/assets
+      mkdir /var/www/yiiki/images
+      mkdir /var/www/yiiki/protected
+      mkdir /var/www/yiiki/protected/extensions
+   generate protected/yiic.bat
+      mkdir /var/www/yiiki/protected/models
+   generate protected/models/LoginForm.php
+   generate protected/models/ContactForm.php
+   generate protected/yiic.php
+      mkdir /var/www/yiiki/protected/data
+   generate protected/data/schema.sqlite.sql
+   generate protected/data/schema.mysql.sql
+   generate protected/data/testdrive.db
+      mkdir /var/www/yiiki/protected/controllers
+   generate protected/controllers/SiteController.php
+   generate protected/yiic
+      mkdir /var/www/yiiki/protected/config
+   generate protected/config/main.php
+   generate protected/config/test.php
+   generate protected/config/console.php
+      mkdir /var/www/yiiki/protected/commands
+      mkdir /var/www/yiiki/protected/commands/shell
+      mkdir /var/www/yiiki/protected/messages
+   generate protected/.htaccess
+      mkdir /var/www/yiiki/protected/views
+      mkdir /var/www/yiiki/protected/views/layouts
+   generate protected/views/layouts/main.php
+      mkdir /var/www/yiiki/protected/views/site
+   generate protected/views/site/login.php
+      mkdir /var/www/yiiki/protected/views/site/pages
+   generate protected/views/site/pages/about.php
+   generate protected/views/site/index.php
+   generate protected/views/site/contact.php
+   generate protected/views/site/error.php
+      mkdir /var/www/yiiki/protected/runtime
+      mkdir /var/www/yiiki/protected/tests
+   generate protected/tests/WebTestCase.php
+   generate protected/tests/phpunit.xml
+   generate protected/tests/bootstrap.php
+      mkdir /var/www/yiiki/protected/tests/report
+      mkdir /var/www/yiiki/protected/tests/functional
+   generate protected/tests/functional/SiteTest.php
+      mkdir /var/www/yiiki/protected/tests/fixtures
+      mkdir /var/www/yiiki/protected/tests/unit
+      mkdir /var/www/yiiki/protected/components
+   generate protected/components/Controller.php
+   generate protected/components/UserIdentity.php
+   generate index-test.php
+
+Your application has been created successfully under /var/www/yiiki.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
