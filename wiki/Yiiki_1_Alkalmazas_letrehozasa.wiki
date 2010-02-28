@@ -194,7 +194,7 @@ protected/views/page/_form.php
 </div><!-- form -->
 }}}
 
-== A Page Modell szabalyainak beallitasa ==
+== 7.2 A Page Modell szabalyainak beallitasa ==
 protected/models/Page.php
 
 {{{
@@ -217,6 +217,21 @@ protected/models/Page.php
 	      array('body', 'safe'),
 		);
 	}
+}}}
+
+== 7.3 A beforeSave() fuggveny hasznalata/atirasa ==
+
+{{{
+      /**
+       *
+       */
+      public function beforeSave()
+      {
+         // and setting the created date ...
+         $this->created=time();
+
+         return parent::beforeSave();
+      }
 }}}
 = Details =
 
