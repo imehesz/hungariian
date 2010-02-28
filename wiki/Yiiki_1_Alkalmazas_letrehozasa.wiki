@@ -13,7 +13,7 @@
 + title VARCHAR(125)     +
 + body TEXT              +
 + revision INT           +
-+ created                +
++ created INT            +
 ++++++++++++++++++++++++++
 }}}
 
