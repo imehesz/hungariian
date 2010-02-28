@@ -1,6 +1,6 @@
 #summary Egy alap WIKI keszitese a Yii (PHP) keretrendszer segitsegevel.
 
-= Adatbazis Felepitese =
+= 1. Adatbazis Felepitese =
 
 *Adatbazis neve:* yiiki
 
@@ -19,8 +19,7 @@
 
 *SQLite3:* CREATE TABLE pages (body TEXT, created integer, id INTEGER PRIMARY KEY, revision integer, title varchar(125));
 
-
-= Introduction =
+= 2. A WEB-es alkalmazas letrehozasa =
 
 {{{
 imehesz@imehesz-laptop:/var/www$ ./yii/framework/yiic webapp yiiki
@@ -91,6 +90,18 @@ Create a Web application under '/var/www/yiiki'? [Yes|No] yes
    generate index-test.php
 
 Your application has been created successfully under /var/www/yiiki.
+}}}
+
+= 3. Az alkalmazas osszekapcsolasa az adatbazissal =
+
+{{{
+protected/config/main.php
+
+...
+ 'db'=>array(                                                                                                         
+              'connectionString' => 'sqlite:protected/data/yiiki.sqlite',
+         ),
+...
 }}}
 
 = Details =
