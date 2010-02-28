@@ -1,4 +1,23 @@
-#summary One-sentence summary of this page.
+#summary Egy alap WIKI keszitese a Yii (PHP) keretrendszer segitsegevel.
+
+= Adatbazis Felepitese =
+
+Adatbazis neve: yiiki
+
+Tablak:
+++++++++++++++++++++++++++
++ Pages                  +
+++++++++++++++++++++++++++
++ id INT (auto_increment)+
++ title VARCHAR(125)     +
++ body TEXT              +
++ revision INT           +
++ created                +
+++++++++++++++++++++++++++
+
+SQLite3:
+CREATE TABLE pages (body TEXT, created integer, id INTEGER PRIMARY KEY, revision integer, title varchar(125));
+
 
 = Introduction =
 
