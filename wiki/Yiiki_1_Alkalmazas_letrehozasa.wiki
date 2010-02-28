@@ -208,12 +208,12 @@ protected/models/Page.php
 		return array(
 			array('created, revision', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>125),
-              *array('title', 'required', 'message'=>'Cimke nem lehet ures!'),
+              array('title', 'required', 'message'=>'Cimke nem lehet ures!'),
               array('title', 'unique'),
               array('title',
                       'match',
                       'pattern'=>'/^[A-Za-z0-9_]+$/',
-                      'message' => 'Csak szamokat, betuket es `_` jelet hasznalhatsz! Hehe' ),*
+                      'message' => 'Csak szamokat, betuket es `_` jelet hasznalhatsz! Hehe' ),
 	      array('body', 'safe'),
 		);
 	}
