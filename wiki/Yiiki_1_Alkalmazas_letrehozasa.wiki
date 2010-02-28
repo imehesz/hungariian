@@ -104,7 +104,7 @@ protected/config/main.php
 ...
 }}}
 
-= 4. A yiic parancssor hasznalata =
+= 4. A yiic avagy a Yii varazspalcaja =
 
 {{{
 imehesz@imehesz-laptop:/var/www/yiiki$ ./protected/yiic shell
@@ -130,6 +130,29 @@ If you have a 'db' database connection, you can test these models now with:
 
 >> 
 }}}
+
+= 5. Mi is az a CRUD? =
+
+== 5.1 A Vezerlo es Nezet letrehozasa a CRUD paranccsal ==
+{{{
+>> crud Page
+   generate PageController.php
+   generate PageTest.php
+      mkdir /var/www/yiiki/protected/views/page
+   generate create.php
+   generate update.php
+   generate index.php
+   generate view.php
+   generate admin.php
+   generate _form.php
+   generate _view.php
+
+Crud 'page' has been successfully created. You may access it via:
+http://hostname/path/to/index.php?r=page
+
+>> 
+}}}
+
 = Details =
 
 Add your content here.  Format your content with:
