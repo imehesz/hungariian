@@ -263,6 +263,34 @@ protected/models/Page.php
      }
 }}}
 
+== 7.4 Az oldalakat lekero SQL modositasa es a hozza tartozo Nezet testreszabasa ==
+
+protected/controllers/PageController.php - actionIndex()
+
+{{{
+	/**
+	 * Lists all models.
+	 */
+	public function actionIndex()
+	{
+        $criteria = new CDbCriteria();
+        $criteria->group = 'title';
+        $criteria->order = 'created DESC';
+
+		$dataProvider=new CActiveDataProvider('Page', array(
+			'pagination'=>array(
+				'pageSize'=>self::PAGE_SIZE,
+			),
+            'criteria' => $criteria,
+		));
+
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
+}}}
+
+
 = Details =
 
 Add your content here.  Format your content with:
