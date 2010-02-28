@@ -104,6 +104,15 @@ protected/config/main.php
 ...
 }}}
 
+= 4. A yiic parancssor hasznalata =
+
+{{{
+imehesz@imehesz-laptop:/var/www/yiiki$ ./protected/yiic shell
+Yii Interactive Tool v1.1 (based on Yii v1.1.0)
+Please type 'help' for help. Type 'exit' to quit.
+>> _
+}}}
+
 = Details =
 
 Add your content here.  Format your content with:
