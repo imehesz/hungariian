@@ -153,6 +153,11 @@ http://hostname/path/to/index.php?r=page
 >> 
 }}}
 
+= 6. Gyors attekintes =
+
+http://yiiki.lenny.local/index.php?r=page
+
+
 = Details =
 
 Add your content here.  Format your content with:
