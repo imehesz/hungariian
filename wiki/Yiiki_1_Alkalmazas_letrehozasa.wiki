@@ -219,8 +219,9 @@ protected/models/Page.php
 	}
 }}}
 
-== 7.3 A beforeSave() fuggveny hasznalata/atirasa ==
+== 7.3 A beforeSave() es save() modell fuggvenyek hasznalata/felulirasa ==
 
+protected/models/Page.php
 {{{
       /**
        *
@@ -233,6 +234,35 @@ protected/models/Page.php
          return parent::beforeSave();
       }
 }}}
+
+protected/models/Page.php
+{{{
+     /**
+      *
+      * @return <type>
+      */
+     public function save( $validate = true )
+     {
+         if( $this->isNewRecord )
+         {
+             // we increase the revision number ...
+             $this->revision = $this->revision+1;
+             return parent::save( $validate );
+         }
+         else
+         {
+             // by setting `save` to false, it will skip the validation,
+             // so we can save the page with the same title
+             // also, update is not really an update because every single change
+             // will be a "new" page, so we can keep history ...
+             $newpage = new Page();
+             $newpage->attributes = $this->attributes;
+             $newpage->save(false);
+             return true;
+         }
+     }
+}}}
+
 = Details =
 
 Add your content here.  Format your content with:
