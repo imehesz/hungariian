@@ -2,11 +2,12 @@
 
 = Adatbazis Felepitese =
 
-Adatbazis neve: yiiki
+*Adatbazis neve:* yiiki
 
-Tablak:
+*Tablak:*
+{{{
 ++++++++++++++++++++++++++
-+ Pages                  +
++ pages                  +
 ++++++++++++++++++++++++++
 + id INT (auto_increment)+
 + title VARCHAR(125)     +
@@ -14,6 +15,7 @@ Tablak:
 + revision INT           +
 + created                +
 ++++++++++++++++++++++++++
+}}}
 
 SQLite3:
 CREATE TABLE pages (body TEXT, created integer, id INTEGER PRIMARY KEY, revision integer, title varchar(125));
@@ -21,6 +23,7 @@ CREATE TABLE pages (body TEXT, created integer, id INTEGER PRIMARY KEY, revision
 
 = Introduction =
 
+{{{
 imehesz@imehesz-laptop:/var/www$ ./yii/framework/yiic webapp yiiki
 Create a Web application under '/var/www/yiiki'? [Yes|No] yes
       mkdir /var/www/yiiki
@@ -89,7 +92,7 @@ Create a Web application under '/var/www/yiiki'? [Yes|No] yes
    generate index-test.php
 
 Your application has been created successfully under /var/www/yiiki.
-
+}}}
 
 = Details =
 
