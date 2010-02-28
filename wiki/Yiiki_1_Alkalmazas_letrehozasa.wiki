@@ -17,8 +17,7 @@
 ++++++++++++++++++++++++++
 }}}
 
-SQLite3:
-CREATE TABLE pages (body TEXT, created integer, id INTEGER PRIMARY KEY, revision integer, title varchar(125));
+*SQLite3:* CREATE TABLE pages (body TEXT, created integer, id INTEGER PRIMARY KEY, revision integer, title varchar(125));
 
 
 = Introduction =
