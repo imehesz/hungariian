@@ -113,6 +113,23 @@ Please type 'help' for help. Type 'exit' to quit.
 >> _
 }}}
 
+== 4.1 A Pages modell letrehozasa a yiic segitsegevel ==
+
+{{{
+>> model Page pages
+   generate models/Page.php
+   generate fixtures/pages.php
+   generate unit/PageTest.php
+
+The following model classes are successfully generated:
+    Page
+
+If you have a 'db' database connection, you can test these models now with:
+    $model=Page::model()->find();
+    print_r($model);
+
+>> 
+}}}
 = Details =
 
 Add your content here.  Format your content with:
