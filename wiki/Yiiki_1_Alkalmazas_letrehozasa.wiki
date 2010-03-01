@@ -1,10 +1,10 @@
-#summary Egy alap WIKI keszitese a Yii (PHP) keretrendszer segitsegevel.
+#summary Egy alap WIKI készítese a Yii (PHP) keretrendszer segítségével.
 
 = 1. Adatbazis Felepitese =
 
-*Adatbazis neve:* yiiki
+*Adatbázis neve:* yiiki
 
-*Tablak:*
+*Táblák:*
 {{{
 ++++++++++++++++++++++++++
 + pages                  +
