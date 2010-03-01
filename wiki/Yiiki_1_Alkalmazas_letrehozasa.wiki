@@ -14,6 +14,13 @@ Itt csak felsorolnék néhány alapvető (és igen fontos) fogalmat, amelyek ism
 
 - *Active Record* - ami tulajdonképpen "megszűnteti" a függőséget a különböző adatbázisok között és az adatbázis táblákat objektumokként kezeli. Ez a gyakorlatban azt jelenti, hogy mondjuk fejlesztői környezetben használhatunk SQLite-ot élesben pedig MySQL-t vagy MsSQL-t stb. ( angol: http://en.wikipedia.org/wiki/Active_record_pattern )
 
+Apache, Nginx és egyéb web szerverek beállításába nem szeretnénk itt belemenni. A programot a következő konfigurációval készítettük:
+
+_- Ubuntu Linux (9.10)
+- Apache 2.x
+- SQLite 3
+- A forráskód pedig a __ROOT__ alatt érhető el (pl: /var/www/yiiki)_
+
 = 1. Adatbázis Felépítése =
 
 *Adatbázis neve:* yiiki
