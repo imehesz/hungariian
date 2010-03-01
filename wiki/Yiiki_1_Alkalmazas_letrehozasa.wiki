@@ -2,7 +2,9 @@
 
 Ebben a rövidke leírásban azt szeretnénk bemutatni, hogy milyen egyszerű elkészíteni egy elegáns web-es alkalmazást a *Yii* segítségével. Ha a későbbiekben igény lesz rá, természetesen belevághatunk kényesebb témákba is, mint például a biztonság, cache-elés, komolyabb AR (ActiveRecord) használat stb. A helyesírásért már itt szeretnék elnézést kérni ...
 
+= 0. Bevezetés =
 
+Itt csak felsorolnék néhány alapvető (és igen fontos) 
 
 = 1. Adatbázis Felépítése =
 
