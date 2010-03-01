@@ -4,7 +4,9 @@ Ebben a rövidke leírásban azt szeretnénk bemutatni, hogy milyen egyszerű el
 
 = 0. Bevezetés =
 
-Itt csak felsorolnék néhány alapvető (és igen fontos) 
+Itt csak felsorolnék néhány alapvető (és igen fontos) fogalmat, amelyek ismerete szükséges :
+
+- Objektum Orientált Programozás: A jelenleg stabil Yii 1.1-es verzió a PHP 5.1-en alapszik, tehát annak ismerete mindenképp ajánlatos. ( http://hu.wikipedia.org/wiki/Objektumorientált_programozás )
 
 = 1. Adatbázis Felépítése =
 
