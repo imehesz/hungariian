@@ -17,8 +17,11 @@ Itt csak felsorolnék néhány alapvető (és igen fontos) fogalmat, amelyek ism
 Apache, Nginx és egyéb web szerverek beállításába nem szeretnénk itt belemenni. A programot a következő konfigurációval készítettük:
 
 _- Ubuntu Linux (9.10)
+
 - Apache 2.x
+
 - SQLite 3
+
 - A forráskód pedig a __ROOT__ alatt érhető el (pl: /var/www/yiiki)_
 
 = 1. Adatbázis Felépítése =
