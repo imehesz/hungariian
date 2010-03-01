@@ -6,7 +6,11 @@ Ebben a rövidke leírásban azt szeretnénk bemutatni, hogy milyen egyszerű el
 
 Itt csak felsorolnék néhány alapvető (és igen fontos) fogalmat, amelyek ismerete szükséges :
 
-- Objektum Orientált Programozás: A jelenleg stabil Yii 1.1-es verzió a PHP 5.1-en alapszik, tehát annak ismerete mindenképp ajánlatos. ( http://hu.wikipedia.org/wiki/Objektumorientált_programozás )
+- *Objektum Orientált Programozás (PHP 5)*: A jelenleg stabil Yii 1.1-es verzió a PHP 5.1-en alapszik, tehát annak ismerete mindenképp szükséges. ( http://hu.wikipedia.org/wiki/Objektumorientált_programozás )
+
+- *Adatbázis (SQL)*: A Yii alapból sokféle adatbázis formátumot tartalmaz. (Az itteni példában én a SQLite-ot választottam, mert nem igényel különösebben bonyolult szerver oldali beállítást) ( http://hu.wikipedia.org/wiki/SQL )
+
+- 
 
 = 1. Adatbázis Felépítése =
 
