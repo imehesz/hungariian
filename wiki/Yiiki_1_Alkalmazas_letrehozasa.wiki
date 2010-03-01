@@ -10,7 +10,9 @@ Itt csak felsorolnék néhány alapvető (és igen fontos) fogalmat, amelyek ism
 
 - *Adatbázis (SQL)*: A Yii alapból sokféle adatbázis formátumot tartalmaz. (Az itteni példában én a SQLite-ot választottam, mert nem igényel különösebben bonyolult szerver oldali beállítást) ( http://hu.wikipedia.org/wiki/SQL )
 
-- *MVC (Model-View-Controller) avagy Modell-Nézet-Vezérlő*: A Yii az egy MVC-t követő keretrendszer. Dióhéjban annyit jelent, hogy az alkalmazás jól elkülöníthető 3 részre. Az M vagy modell, ami az adatbázis jellegű lekérdezéseket végzi, a C vagy vezérlő ami kapcsolatot teremt és feldolgoz felhasználók által bevitt információt és végül a V vagy nézet, ami pedig a megjelenítést végzi. ( http://hu.wikipedia.org/wiki/MVC )
+- *MVC (Model-View-Controller) avagy Modell-Nézet-Vezérlő*: A Yii az egy MVC-t szorosan követő keretrendszer. Dióhéjban annyit jelent, hogy az alkalmazás jól elkülöníthető 3 részre. Az M vagy modell, ami az adatbázis jellegű lekérdezéseket végzi, a C vagy vezérlő ami kapcsolatot teremt és feldolgoz felhasználók által bevitt információt és végül a V vagy nézet, ami pedig magát a megjelenítést végzi. Ilyen többek között a Ruby On Rails rendszer is.( http://hu.wikipedia.org/wiki/MVC )
+
+- *Active Record* - ami tulajdonképpen "megszűnteti" a függőséget a különböző adatbázisok között és az adatbázis táblákat objektumokként kezeli. Ami a gyakorlatban azt jelenti, hogy mondjuk a fejlesztői környezetben használhatunk SQLite-ot élesben pedig MySQL-t vagy MsSQL-t stb. ( angol: http://en.wikipedia.org/wiki/Active_record_pattern )
 
 = 1. Adatbázis Felépítése =
 
