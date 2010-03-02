@@ -26,7 +26,7 @@ _- Ubuntu Linux (9.10)
 
 - A forráskód pedig a __ROOT__ alatt érhető el (pl: /var/www/yiiki)
 
-Az is fontos, hogy a Yii rendszer a parancssorból is futtatható legyen (_PHP CLI_) és magát 
+Az is fontos, hogy a Yii rendszer a parancssorból is futtatható legyen (_PHP CLI_)
 
 = 1. Adatbázis Felépítése =
 
@@ -122,6 +122,8 @@ Create a Web application under '/var/www/yiiki'? [Yes|No] yes
 Your application has been created successfully under /var/www/yiiki.
 
 }}}
+
+Ha minden jól sikerült, akkor a _Your application has been created successfully under /var/www/yiiki_ - szerű üzenet jelenik meg, ami annyit jelent, hogy az alkalmazás sikeresen létrehozva a megadott mappa alatt.
 
 = 3. Az alkalmazas osszekapcsolasa az adatbazissal =
 
