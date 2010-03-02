@@ -24,7 +24,9 @@ _- Ubuntu Linux (9.10)
 
 - PHP 5.2.x
 
-- A forráskód pedig a __ROOT__ alatt érhető el (pl: /var/www/yiiki)_
+- A forráskód pedig a __ROOT__ alatt érhető el (pl: /var/www/yiiki)
+
+Az is fontos, hogy a Yii rendszer a parancssorból is futtatható legyen (PHP CLI) és magát 
 
 = 1. Adatbázis Felépítése =
 
@@ -46,6 +48,8 @@ _- Ubuntu Linux (9.10)
 *SQLite3:* CREATE TABLE pages (body TEXT, created integer, id INTEGER PRIMARY KEY, revision integer, title varchar(125));
 
 = 2. A WEB-es alkalmazás létrehozása =
+
+Az alap alkalmazás létrehozása rendkívül egyszerű, csak adjuk ki a kovetkező utasítást (a web szerver ROOT könyvtárában állva, (pl /var/www). Ekkor 
 
 {{{
 imehesz@imehesz-laptop:/var/www$ ./yii/framework/yiic webapp yiiki
