@@ -134,7 +134,7 @@ Azt már itt érdemes megjegyezni, hogy a programunk már ebben a fázisban műk
 
 A Wiki-k többnyire nagyon egyszerű, monthatnánk butácska, programok, amik semmi mást nem csinálnak, csak oldalakat tárolnak és mutatnak meg. A problémát többféleképpen is meg lehetne oldani, még adatbázis használata nélkül is! De mi szeretnénk bemutatni, hogy mennyire egyszerű adatbázisokat kezelni Yii-vel.
 
-A fő konfigurációs file a protected/config mappa alatt található és main.php a neve. Nyissuk is meg a kedvenc szövegszerkeztőnkkel. (mámrmint amelyiket programozásra használunk). Aki egyből a VIM-re gondolt, az laphat egy piros pontot.
+A fő konfigurációs file a protected/config mappa alatt található és main.php a neve. Nyissuk is meg a kedvenc szövegszerkeztőnkkel. (mámrmint amelyiket programozásra használunk). Aki egyből a VIM-re gondolt, az kaphat egy piros pontot. Módosítsuk is az alábbiak szerint (*Fontos*: az adatbázis file-t a protected/data alá tettük)
 
 {{{
 protected/config/main.php
@@ -145,6 +145,8 @@ protected/config/main.php
          ),
 ...
 }}}
+
+Mindez
 
 = 4. A yiic avagy a Yii varazspalcaja =
 
