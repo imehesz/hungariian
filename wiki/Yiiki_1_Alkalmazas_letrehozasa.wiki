@@ -22,6 +22,8 @@ _- Ubuntu Linux (9.10)
 
 - SQLite 3
 
+- PHP 5.2.x
+
 - A forráskód pedig a __ROOT__ alatt érhető el (pl: /var/www/yiiki)_
 
 = 1. Adatbázis Felépítése =
