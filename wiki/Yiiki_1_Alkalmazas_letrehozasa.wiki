@@ -132,7 +132,7 @@ Azt már itt érdemes megjegyezni, hogy a programunk már ebben a fázisban műk
 
 = 3. Az alkalmazás összekapcsolása az adatbázissal =
 
-A Wiki-k többnyire nagyon egyszerű, monthatnánk butácska, programok, amik semmi mást nem csinálnak, csak oldalakat tárolnak és mutatnak meg. A problémát többféleképpen is meg lehetne oldani még adatbázis használata nélkül is! De mi szeretnénk bemutatni, hogy mennyire egyszerű adatbázisokat használni Yii-vel.
+A Wiki-k többnyire nagyon egyszerű, monthatnánk butácska, programok, amik semmi mást nem csinálnak, csak oldalakat tárolnak és mutatnak meg. A problémát többféleképpen is meg lehetne oldani, még adatbázis használata nélkül is! De mi szeretnénk bemutatni, hogy mennyire egyszerű adatbázisokat kezelni Yii-vel.
 
 A fő konfigurációs file a protected/config mappa alatt található és main.php a neve. Nyissuk is meg a kedvenc szövegszerkeztőnkkel. (mámrmint amelyiket programozásra használunk). Aki egyből a VIM-re gondolt, az laphat egy piros pontot.
 
