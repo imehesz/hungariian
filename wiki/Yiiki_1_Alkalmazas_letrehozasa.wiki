@@ -126,9 +126,15 @@ Your application has been created successfully under /var/www/yiiki.
 
 }}}
 
-Ha minden jól sikerült, akkor a _Your application has been created successfully under /var/www/yiiki_ - szerű üzenet jelenik meg, ami annyit jelent, hogy az alkalmazás sikeresen létrehozva a megadott mappa alatt.
+Ha minden jól sikerült, akkor a _Your application has been created successfully under /var/www/yiiki_ - szerű üzenet jelenik meg, ami röviden annyit jelent, hogy az alap program sikeresen létrehozva a megadott mappa alatt.
 
-= 3. Az alkalmazas osszekapcsolasa az adatbazissal =
+Azt már itt érdemes megjegyezni, hogy a programunk már ebben a fázisban működőképes. Ha megtekintjük a URL-t egy böngészőben (pl http://yiiki.peldaprogram.local) akkor egy (remélhetőleg) üdvözlő képernyő fogad bennünket.
+
+= 3. Az alkalmazás összekapcsolása az adatbázissal =
+
+A Wiki-k többnyire nagyon egyszerű, monthatnánk butácska, programok, amik semmi mást nem csinálnak, csak oldalakat tárolnak és mutatnak meg. A problémát többféleképpen is meg lehetne oldani még adatbázis használata nélkül is! De mi szeretnénk bemutatni, hogy mennyire egyszerű adatbázisokat használni Yii-vel.
+
+A fő konfigurációs file a protected/config mappa alatt található és main.php a neve. Nyissuk is meg a kedvenc szövegszerkeztőnkkel. (mámrmint amelyiket programozásra használunk). Aki egyből a VIM-re gondolt, az laphat egy piros pontot.
 
 {{{
 protected/config/main.php
