@@ -26,7 +26,7 @@ _- Ubuntu Linux (9.10)
 
 - A forráskód pedig a __ROOT__ alatt érhető el (pl: /var/www/yiiki)
 
-Az is fontos, hogy a Yii rendszer a parancssorból is futtatható legyen (PHP CLI) és magát 
+Az is fontos, hogy a Yii rendszer a parancssorból is futtatható legyen (_PHP CLI_) és magát 
 
 = 1. Adatbázis Felépítése =
 
