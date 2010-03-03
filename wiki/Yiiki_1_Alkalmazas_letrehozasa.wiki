@@ -191,12 +191,14 @@ Nos, itt elég sok minden történt, szűrjük ki ami nekünk fontos lehet.
 
 {{{model/Page.php}}} - ez nagyon fontos, ez lesz a modellünk, ami majd az adatbázisos lekérdezéseket végzi.
 
-{{{fixtures/pages.php}}}
+{{{fixtures/pages.php
+unti/PageTest.php}}} - sajnos ez utóbbi kettővel nem fogunk foglalkozni (legalábbis ebben a cikkben nem), annyit érdemes megjegyezni, hogy a TDD-hez nyújt segítséget. (Test Driven Development - talán _Tesztelésen Alapuló Fejlesztés_-nek lehetne nevezni - http://en.wikipedia.org/wiki/Test-driven_development )
 
-{{{unti/PageTest.php}}} - sajnos ez utóbbi kettővel nem fogunk foglalkozni (legalábbis ebben a cikkben nem), annyit érdemes megjegyezni, hogy a TDD-hez nyújt segítséget. (Test Driven Development - talán _Tesztelésen Alapuló Fejlesztés_-nek lehetne nevezni - http://en.wikipedia.org/wiki/Test-driven_development )
-
+A parancs lefutása után a program még arról is értesít minket, hogy ha be van állítva az adatbázis kapcsolatunk, ha akarjuk ki is próblhatjuk. Egyelőre tudjuk, hogy semmi nincs az adatbázisunkban, szóval nem sok értelme lenne a lekérdezésnek :)
 
 = 5. Mi is az a CRUD? =
+
+Azzal,
 
 == 5.1 A Vezerlo es Nezet letrehozasa a CRUD paranccsal ==
 {{{
