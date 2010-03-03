@@ -154,7 +154,9 @@ protected/config/main.php
 
 = 4. A yiic avagy a Yii varázspálcája =
 
-Természetesen lehetne a fejlesztést a _yiic_ teljes hanyagolásával folytatni, de  használata mindenképpen megkönnyíti a programozást. A {{{__ROOT__}}} könyvtárunkban egyszerűen adjuk ki a következő utasítást: {{{./protected/yiic shell}}}
+Természetesen lehetne a fejlesztést a _yiic_ teljes hanyagolásával folytatni, de  használata mindenképpen megkönnyíti a programozást. A {{{__ROOT__}}} könyvtárunkban egyszerűen adjuk ki a következő utasítást:
+
+{{{./protected/yiic shell}}}
 
 {{{
 imehesz@imehesz-laptop:/var/www/yiiki$ ./protected/yiic shell
@@ -162,6 +164,8 @@ Yii Interactive Tool v1.1 (based on Yii v1.1.0)
 Please type 'help' for help. Type 'exit' to quit.
 >> _
 }}}
+
+Ha járatosak vagyunk valamelyik SQL parancssori programjával, akkor ez ismerős lehet. Segítséget a {{{help [utasitas]}}} lehet kérni. Vágjunk is bele ...
 
 == 4.1 A Pages modell letrehozasa a yiic segitsegevel ==
 
