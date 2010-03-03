@@ -198,15 +198,22 @@ A parancs lefutása után a program még arról is értesít minket, hogy ha be 
 
 = 5. Mi is az a CRUD? =
 
-Azzal, hogy elészítettük a _Page_ modellünket, még semmi böngészőben látható eredményt nem sikerült produkálnunk. No és itt jön a *CRUD* a képbe, 
+Azzal, hogy elészítettük a _Page_ modellünket, még semmi, böngészőben látható eredményt nem sikerült produkálnunk. No és itt jön a híres *CRUD* a képbe, 
 
-Create
+Create - Létrehoz
 
-Read
+Read - (Be)olvas
 
+Update - Frissít
 
+Delete - Töröl
 
-== 5.1 A Vezerlo es Nezet letrehozasa a CRUD paranccsal ==
+Ezeket az utasításokat pedig az adatbázisunk (és Pages táblánk) egy-egy rekordjához fogjuk használni.
+
+== 5.1 A Vezérlő és Nézet létrehozása a CRUD paranccsal ==
+
+Még mindig a {{{shell}}}-ben állva adjuk ki a következő parancsot:
+
 {{{
 >> crud Page
    generate PageController.php
@@ -226,7 +233,7 @@ http://hostname/path/to/index.php?r=page
 >> 
 }}}
 
-= 6. Gyors attekintes =
+= 6. Gyors áttekintés =
 
 http://yiiki.lenny.local/index.php?r=page
 
