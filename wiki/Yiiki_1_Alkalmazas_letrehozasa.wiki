@@ -198,7 +198,13 @@ A parancs lefutása után a program még arról is értesít minket, hogy ha be 
 
 = 5. Mi is az a CRUD? =
 
-Azzal,
+Azzal, hogy elészítettük a _Page_ modellünket, még semmi böngészőben látható eredményt nem sikerült produkálnunk. No és itt jön a *CRUD* a képbe, 
+
+Create
+
+Read
+
+
 
 == 5.1 A Vezerlo es Nezet letrehozasa a CRUD paranccsal ==
 {{{
