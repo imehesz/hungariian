@@ -165,9 +165,11 @@ Please type 'help' for help. Type 'exit' to quit.
 >> _
 }}}
 
-Ha járatosak vagyunk valamelyik SQL parancssori programjával, akkor ez ismerős lehet. Segítséget a {{{help [utasitas]}}} lehet kérni. Vágjunk is bele ...
+Ha járatosak vagyunk valamelyik SQL parancssori programjával, akkor ez ismerős lehet. Segítséget a {{{help [utasitas]}}}-sal lehet kérni. Vágjunk is bele.
 
-== 4.1 A Pages modell letrehozasa a yiic segitsegevel ==
+== 4.1 A `Pages` (oldalak) modell létrehozása a yiic segítségével ==
+
+Egyszerűen adjuk ki a következő parancsot (még mindig a {{{shell}}}-ben vagyunk!)
 
 {{{
 >> model Page pages
@@ -184,6 +186,13 @@ If you have a 'db' database connection, you can test these models now with:
 
 >> 
 }}}
+
+Nos, itt elég sok minden történt, szűrjük ki ami nekünk fontos lehet. 
+
+{{{model/Page.php}}} - ez nagyon fontos, ez lesz a modellünk, ami majd az adatbázisos lekérdezéseket végzi.
+{{{fixtures/pages.php}}}
+{{{unti/PageTest.php}}} - sajnos ez utóbbi kettővel nem fogunk foglalkozni (legalábbis ebben a cikkben nem), annyit érdemes megjegyezni, hogy a TDD-hez nyújt segítséget. (Test Driven Development - talán _Tesztelésen Alapuló Fejlesztés_-nek lehetne nevezni - http://en.wikipedia.org/wiki/Test-driven_development )
+
 
 = 5. Mi is az a CRUD? =
 
