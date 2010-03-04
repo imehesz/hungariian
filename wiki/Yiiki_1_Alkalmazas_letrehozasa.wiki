@@ -239,11 +239,15 @@ Aha, itt már lényegesen több minden történt mint a _modell_ létrehozásán
 
 = 6. Gyors áttekintés =
 
-http://yiiki.lenny.local/index.php?r=page
+A programunk jelenlegi állapotában mindenre kész. Tudunk oldalakat listázni, készíteni és törölni. Hogy megbizonyosodjunk róla, böngészőnkkel látogassuk meg a következő URL-t:
 
-= 7. Alkalmazasunk testreszabasa =
+{{{http://yiiki.lenny.local/index.php?r=page}}}
 
-== 7.1 A beviteli form modositasa =
+Na de mi nem elégszünk meg ennyivel, hiszen egy igazi Wiki-t szeretnénk készíteni. Jöhet a testreszabás ...
+
+= 7. Alkalmazásunk testreszabása =
+
+== 7.1 A beviteli form módositasa =
 
 http://yiiki.lenny.local/index.php?r=page/create
 protected/views/page/_form.php
