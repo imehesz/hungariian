@@ -249,6 +249,8 @@ Na de mi nem elégszünk meg ennyivel, hiszen egy igazi Wiki-t szeretnénk kész
 
 == 7.1 A beviteli form módositasa =
 
+Ha most szeretnénk egy _Oldalt_ készíteni, akkor azonnal észlelnénk, hogy a beviteli form-on egy csomó olyan mező van, amit nem szeretnénk kézzel minden egyes alkalommal kitölteni, illetve elvárnánk a programunktól, hogy saját maga töltse ki. Ilyen például _created_ mező, vagy a _revision_.
+
 http://yiiki.lenny.local/index.php?r=page/create
 protected/views/page/_form.php
 
