@@ -233,6 +233,10 @@ http://hostname/path/to/index.php?r=page
 >> 
 }}}
 
+Aha, itt már lényegesen több minden történt mint a _modell_ létrehozásánál. Láthatjuk, hogy maga a _Controller_ (vezérlő) is elkészült, egy újabb teszt file, a {{{view/page}}} mappa is, ahol a rendszer fogja tárolni a szükséges nézet file-okat (create.php, update.php stb).
+
+*Megj:( A vezérlő külön is elkészíthető a {{{controller page}}} paranccsal.
+
 = 6. Gyors áttekintés =
 
 http://yiiki.lenny.local/index.php?r=page
