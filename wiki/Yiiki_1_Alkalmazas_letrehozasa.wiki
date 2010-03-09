@@ -256,7 +256,7 @@ Ha most probálnánk egy _Oldalt_ készíteni, akkor azonnal észlelnénk, hogy 
 
 http://yiiki.lenny.local/index.php?r=page/create
 
-Módosítsuk is a form-unkat (*protected/views/page/_form.php*) az alábbiak szerint.
+Módosítsuk is a form-unkat ({{{protected/views/page/_form.php}}}) az alábbiak szerint.
 
 {{{
 <div class="form">
