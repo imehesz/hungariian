@@ -323,7 +323,7 @@ Itt még azt is megfigyelhetjük, hogy hogyan kell a programunkat magyarul taní
 
 A modelljeink, amik a programunkban az adatbázis lekérdezéseket kezelik, mindenféle függyvényekkel fel vannak fegyverkezve, hogy nekünk ne kelljen védőkesztyű nélkül SQL-kódban kotorászni. Az egyik ilyen függvény a _save()_ (elment) és hű csatlósa a _beforeSave()_ (mielőtt elment). A _save()_ egy adatbázis rekordot köteles elmenteni vagy felülírni.
 
-A _pages_ adatbázis táblánkban van egy olyan mező, hogy _created_ (készítve), ami egy dátum mező. (a példánkban UNIX Timestamp-et használunk!) Ez a mező tartja nyilván, hogy az adott oldal mikor lett készítve/felülírva.
+A _pages_ adatbázis táblánkban van egy olyan mező, hogy _created_ (készítve), ami egy dátum mező. (a példánkban UNIX Timestamp-et használunk!) Ez a mező tartja nyilván, hogy az adott oldal mikor lett készítve/felülírva. Ugyan használhatnánk a _save()_ függvényt arra, hogy ezt az értéket beállítsuk, a példa kedvéért ezt a _beforeSave()_-vel oldjuk meg. (Az fontos, hogy itt a szülő _beforeSave()_-vel térjünk vissza, {{{return parent::beforeSave()}}} )
 
 
 protected/models/Page.php
