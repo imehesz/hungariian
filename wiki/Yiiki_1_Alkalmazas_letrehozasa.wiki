@@ -317,7 +317,11 @@ protected/models/Page.php
 
 Az itt használt szabályok elég egyértelműek, de ha valaki jobban bele szeretne mélyülni itt olvashat róluk bővebben: http://www.yiiframework.com/doc/cookbook/56/
 
-== 7.3 A beforeSave() es save() modell fuggvenyek hasznalata/felulirasa ==
+Itt még azt is megfigyelhetjük, hogy hogyan kell a programunkat magyarul tanítani ;)
+
+== 7.3 A _beforeSave()_ és _save()_ modell függvények használata/felülírása ==
+
+A modelljeink, amik a programunkban az adatbázis lekérdezéseket kezelik, mindenféle függyvényekkel fel vannak fegyverkezve, hogy nekünk ne kelljen védőkesztyű nélkül SQL-kódban kotorászni. Az egyik ilyen függvény a _save()_ (elment) és hű csatlósa a _beforeSave()_ (mielőtt elment) ami azt a célt szolgálja, hogy egy adatbázis rekordot elmentsen vagy felülírjon.
 
 protected/models/Page.php
 {{{
