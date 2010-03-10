@@ -252,7 +252,7 @@ Na de mi nem elégszünk meg ennyivel, hiszen egy igazi Wiki-t szeretnénk kész
 
 == 7.1 A beviteli form módositasa =
 
-Ha most probálnánk egy _Oldalt_ készíteni, akkor azonnal észlelnénk, hogy a beviteli form-on egy csomó olyan mező van, amit nem szeretnénk kézzel minden egyes alkalommal kitölteni, illetve elvárnánk a programunktól, hogy saját maga töltse ki. Ilyen például _created_ mező, vagy a _revision_.
+Ha most probálnánk egy _Oldalt_ készíteni, akkor azonnal észlelnénk, hogy a beviteli form-on egy csomó olyan mező van, amit nem szeretnénk kézzel minden egyes alkalommal kitölteni, illetve elvárnánk a programunktól, hogy saját maga töltse ki. Ilyen például a _created_ vagy a _revision_ mező.
 
 http://yiiki.lenny.local/index.php?r=page/create
 
@@ -289,6 +289,8 @@ Módosítsuk is a form-unkat ({{{protected/views/page/_form.php}}}) az alábbiak
 }}}
 
 == 7.2 A Page Modell szabályainak beállítása ==
+A _Page_ (Oldal) modellünkre is ráfér egy kis farigcsálás. A _yiic_ többnyire kitalálta, hogy milyen szabályokat hozzon létre a különböző mezőkhöz, a gondolatolvasástól azért még messze van. Mi ugyanis azt szeretnénk, ha az Oldalunk címébe csakis betűk, számok, vagy aláhúzás jel szerepelhessen. (Egy jó kis bővítés lenne, ha a programunk automatikusan felülírná a bevitt a címet, de az egyszerűség kedvéért itt egy szabályt hozunk létre)
+
 protected/models/Page.php
 
 {{{
@@ -302,16 +304,18 @@ protected/models/Page.php
 		return array(
 			array('created, revision', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>125),
-              array('title', 'required', 'message'=>'Cimke nem lehet ures!'),
-              array('title', 'unique'),
-              array('title',
-                      'match',
-                      'pattern'=>'/^[A-Za-z0-9_]+$/',
-                      'message' => 'Csak szamokat, betuket es `_` jelet hasznalhatsz! Hehe' ),
-	      array('body', 'safe'),
+                        array('title', 'required', 'message'=>'Cím nem lehet üres!'),
+                        array('title', 'unique'),
+                        array('title',
+                                'match',
+                                'pattern'=>'/^[A-Za-z0-9_]+$/',
+                                'message' => 'Csak számokat, betűket és `_` jelet használhatsz! Hehe' ),
+	                array('body', 'safe'),
 		);
 	}
 }}}
+
+Az itt használt szabályok elég egyértelműek, de ha valaki jobban bele szeretne mélyülni itt olvashat róluk bővebben: http://www.yiiframework.com/doc/cookbook/56/
 
 == 7.3 A beforeSave() es save() modell fuggvenyek hasznalata/felulirasa ==
 
