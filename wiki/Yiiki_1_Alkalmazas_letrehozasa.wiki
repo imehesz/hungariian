@@ -152,7 +152,7 @@ protected/config/main.php
 
 És ennyi ...
 
-= 4. A yiic avagy a Yii varázspálcája =
+= 4. A {{{yiic}}} avagy a Yii varázspálcája =
 
 Természetesen lehetne a fejlesztést a _yiic_ teljes hanyagolásával folytatni, de  használata mindenképpen megkönnyíti a programozást. A {{{__ROOT__}}} könyvtárunkban egyszerűen adjuk ki a következő utasítást:
 
