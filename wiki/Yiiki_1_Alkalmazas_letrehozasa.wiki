@@ -372,7 +372,7 @@ protected/models/Page.php
      }
 }}}
 
-*Yii* olyan finomságokkal lát el bennünket, mint például a {{{$this->isNewRecord}}} ami egyszerűen megmondja nekünk, hogy most egy új rekordról van e szó, vagy csak felülírunk egyet. Mi persze tudjuk, hogy nekünk arra van szükségünk, hogy minden egyes oldal újként legyen elmentve, tehát ha az oldal nem új, akkor egyszerűen gyártunk egyet ami a {{{$newpage->attributes}}} segítségével felveszi a régi értékeit.
+*Yii* olyan finomságokkal lát el bennünket, mint például a {{{$this->isNewRecord}}} ami egyszerűen megmondja nekünk, hogy most egy új rekordról van e szó, vagy csak felülírunk egyet. Mi persze tudjuk, hogy nekünk arra van szükségünk, hogy minden egyes oldal újként legyen elmentve, tehát ha az oldal nem új, akkor egyszerűen gyártunk egyet ami a {{{$newpage->attributes=$this->attributes}}} segítségével felveszi az eredeti oldal értékeit.
 
 Még annyit érdemes megjegyezni, hogy ha a _save()_ függvényt _false_ paraméterrel hívjuk meg, akkor az AR szabályai nem vonatkoznak az adott rekordra.
 
