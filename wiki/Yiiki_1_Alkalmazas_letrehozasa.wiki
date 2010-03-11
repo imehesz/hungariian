@@ -342,6 +342,8 @@ protected/models/Page.php
       }
 }}}
 
+A _save()_ függvénynél már kicsit más a helyzet. Először vegyük sorra, hogy mit is szeretnénk a programunktól, amikor elmentünk egy oldalt. Ha minden igaz, említettük az elején, hogy a jövőben szeretnénk egy *revert* opciót, ami annyit jelent, hogy az odalalainkat, ha akarjuk, visszaállíthatjuk egy korábbi változatba. Ezt többféle módon is meg lehet valósítani, de talán a legrövidebb megoldás, ha az oldalakat mindig újként mentjük el, és csak növeljük a revision azaz verziószámot.
+
 protected/models/Page.php
 {{{
      /**
@@ -370,7 +372,11 @@ protected/models/Page.php
      }
 }}}
 
-== 7.4 Az oldalakat lekero SQL modositasa es a hozza tartozo Nezet testreszabasa ==
+*Yii* olyan finomságokkal lát el bennünket, mint például a {{{$this->isNewRecord}}} ami egyszerűen megmondja nekünk, hogy most egy új rekordról van e szó, vagy csak felülírunk egyet. Mi persze tudjuk, hogy nekünk arra van szükségünk, hogy minden egyes oldal újként legyen elmentve, tehát ha az oldal nem új, akkor egyszerűen gyártunk egyet ami a {{{$newpage->attributes}}} segítségével felveszi a régi értékeit.
+
+Még annyit érdemes megjegyezni, hogy ha a _save()_ függvényt _false_ paraméterrel hívjuk meg, akkor az AR szabályai nem vonatkoznak az adott rekordra.
+
+== 7.4 Az oldalakat lekérő SQL módosítása és a hozzá tartozó View (Nézet) testreszabása ==
 
 protected/controllers/PageController.php - actionIndex()
 
