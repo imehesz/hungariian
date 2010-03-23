@@ -405,6 +405,8 @@ protected/controllers/PageController.php - actionIndex()
 	}
 }}}
 
+SQL-ben valamennyire jártasabbak egyből kiszúrhatják, hogy mi is történik. Itt létrehozunk egy úgynevezett _CDBCriteria()_ osztályt aminek segítségével különböző SQL paramétereket állíthatunk be, és ez által módosíthatjuk a lekérdezéseinket, ami ebben az esetben az Oldalak csoportosítását jelenti a _title_ azaz cím szerint és rendezést a létrehozás dátuma szerint.
+
 protected/views/page/index.php
 protected/views/page/_view.php
 
