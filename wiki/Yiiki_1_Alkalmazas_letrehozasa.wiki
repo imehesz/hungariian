@@ -429,6 +429,9 @@ protected/controllers/PageController.php
 	}
 }}}
 
+
+A következő file-ok pedig a megjelenítést szolgálják ...
+
 protected/views/page/index.php
 
 {{{
@@ -460,6 +463,11 @@ $this->breadcrumbs=array(
 	<?php echo $model->body; ?>
 </div>
 }}}
+
+Jajj de jó, már lassan készen is vagyunk. Mondjuk a megjelenített oldal egyáltalán nem úgy néz ki mint egy Wiki oldal. A következő fejezetben megnézzük, hogyan lehet külső modulokat behúzni a Yii rendszerbe, pl. egy Wiki értelmezőt, hogy megússzuk a sok _str_replace()_-t ;)
+
+== 8 Külső modulok, kiterjesztések használata ==
+
 = Details =
 
 Add your content here.  Format your content with:
