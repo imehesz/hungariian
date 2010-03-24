@@ -407,17 +407,9 @@ protected/controllers/PageController.php - actionIndex()
 
 SQL-ben valamennyire jártasabbak egyből kiszúrhatják, hogy mi is történik. Itt létrehozunk egy úgynevezett _CDBCriteria()_ osztályt aminek segítségével különböző SQL paramétereket állíthatunk be, és ez által módosíthatjuk a lekérdezéseinket, ami ebben az esetben az Oldalak csoportosítását jelenti a _title_ azaz cím szerint és rendezést a létrehozás dátuma szerint.
 
-protected/views/page/index.php
-protected/views/page/_view.php
+Az alábbi file-okat pedig módosítsuk izlésünk szerint (illetve az én izlésem szerint). Ha még emlékszünk, a *PageController*-t kicsit átalakítottuk, hogy az adott Oldal azonosító ID-ja helyett a _title_ mező értékével dolgozzon. Ez nagyon szép és jó, de a program többi részét is kicsit át kell alakítanunk. Ilyen például az _actionCreate()_ és _actionUpdate()_ funkciókban használt _redirect()_ ami azt a célt szolgálja, hogy bizonyos események után böngészőnket egy meghatározott oldalra küldje.
 
-{{{
-<div class="view">
-	<?php echo CHtml::link( CHtml::encode($data->title), $this->createUrl('page/view', array( 'title' => $data->title ) ) ); ?>
-	(Rev.: <?php echo CHtml::encode($data->revision); ?>)
-	<i><?php echo date( 'Y-m-d H:i', CHtml::encode($data->created) ); ?></i>
-</div>
-}}}
-
+protected/controllers/PageController.php
 
 {{{
 	public function actionCreate()
@@ -435,6 +427,16 @@ protected/views/page/_view.php
 			'model'=>$model,
 		));
 	}
+}}}
+
+protected/views/page/index.php
+
+{{{
+<div class="view">
+	<?php echo CHtml::link( CHtml::encode($data->title), $this->createUrl('page/view', array( 'title' => $data->title ) ) ); ?>
+	(Rev.: <?php echo CHtml::encode($data->revision); ?>)
+	<i><?php echo date( 'Y-m-d H:i', CHtml::encode($data->created) ); ?></i>
+</div>
 }}}
 
 protected/views/page/view.php
