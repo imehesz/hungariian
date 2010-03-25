@@ -472,11 +472,13 @@ Alkotásaink fejlesztése közben gyakran fordul elő olyan helyzet, hogy valaki
 
 Már nagyon közel vagyunk ahhoz, hogy egy használható kis Wiki-nk legyen, már csak maga a Wiki "_nyelvértelmező_" hiányzik. Persze írhatnánk egyet magunktól, de inkább bizzunk benne, hogy valaki más már megírta - és láss csodát, így is van: http://www.ivan.fomichev.name/2010/02/php-creole-10-wiki-markup-parser.html (Ez a rendszer a WikiCreole nyelvet használja: http://www.wikicreole.org/wiki/Creole1.0 ). Persze nem kötelező ezt használni, de az egyszerűség kedvéért mi ezt választottuk.
 
-Mint bizonyára észrevettük a URL-ből, ennek a csomagnak az ég világon semmi köze nincs a Yii-hez, ez csak egy egyszerű PHP osztály, tehát nekünk a második megközelítés lesz a legjobb. Töltsük is le az összecsomagolt állományt és másoljuk be az _application/vendors/_ mappába (ha nincs ilyenünk, csináljunk egyet).
+Mint bizonyára észrevettük a URL-ből, ennek a csomagnak az ég világon semmi köze nincs a Yii-hez, ez csak egy egyszerű PHP osztály, tehát nekünk a második megközelítés lesz a legjobb. Töltsük is le az összecsomagolt állományt és másoljuk a _creole.php_ -t be az _application/vendors/_ mappába (ha nincs ilyen mappánk, csináljunk egyet).
 
+Attól még, hogy a file ott heverészik a _vendors_ könyvárba, még a Yii nem tudja, hogy mi ezt használni is szeretnénk. Itt jön a _Yii::import()_ a képbe.
 
-
-
+{{{
+Yii::import('application.vendors.*');
+}}}
 
 = Details =
 
