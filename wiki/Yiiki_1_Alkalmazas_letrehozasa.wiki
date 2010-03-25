@@ -466,7 +466,9 @@ $this->breadcrumbs=array(
 
 Jajj de jó, már lassan készen is vagyunk. Mondjuk a megjelenített oldal egyáltalán nem úgy néz ki mint egy Wiki oldal. A következő fejezetben megnézzük, hogyan lehet külső modulokat behúzni a Yii rendszerbe, pl. egy Wiki értelmezőt, hogy megússzuk a sok _str_replace()_-t ;)
 
-= 8 Külső modulok, kiterjesztések használata =
+= 8. Külső modulok, kiterjesztések használata =
+
+Alkotásaink fejlesztése közben gyakran fordul elő olyan helyzet, hogy valaki (lehet, hogy mi magunk), valahol máshol (pl. egy másik keretrendszer alatt) már megoldotta a felmerülő problémát és szeretnénk a kódot újra használni. Erre a Yii rendszer többféle lehetőséget ad. Használhatunk, kifejezetten Yii-nek szánt _kiterjeszések_ -et (extensions: http://www.yiiframework.com/extensions/ )
 
 = Details =
 
