@@ -468,7 +468,15 @@ Jajj de jó, már lassan készen is vagyunk. Mondjuk a megjelenített oldal egy�
 
 = 8. Külső modulok, kiterjesztések használata =
 
-Alkotásaink fejlesztése közben gyakran fordul elő olyan helyzet, hogy valaki (lehet, hogy mi magunk), valahol máshol (pl. egy másik keretrendszer alatt) már megoldotta a felmerülő problémát és szeretnénk a kódot újra használni. Erre a Yii rendszer többféle lehetőséget ad. Használhatunk, kifejezetten Yii-nek szánt _kiterjeszések_ -et (extensions: http://www.yiiframework.com/extensions/ )
+Alkotásaink fejlesztése közben gyakran fordul elő olyan helyzet, hogy valaki (lehet, hogy mi magunk) valahol máshol (pl. egy másik keretrendszer alatt) már megoldotta a felmerülő problémát és szeretnénk a kódot újra használni. Erre _Yii_ barátunk többféle lehetőséget ad. Használhatunk, kifejezetten Yii-nek szánt _kiterjeszések_ -et (extensions: http://www.yiiframework.com/extensions/ ) vagy teljesen Yii-től független csomagokat. Ilyen például a _ZendFramework_ -be beépített _RSS_ kezelő rendszer. Nekünk jelenleg erre nincs szükségünk, de ha valakit bővebben érdekel, az itten járhat utána: http://www.yiiframework.com/doc/cookbook/20/ .
+
+Már nagyon közel vagyunk ahhoz, hogy egy használható kis Wiki-nk legyen, már csak maga a Wiki "_nyelvértelmező_" hiányzik. Persze írhatnánk egyet magunktól, de inkább bizzunk benne, hogy valaki más már megírta - és láss csodát, így is van: http://www.ivan.fomichev.name/2010/02/php-creole-10-wiki-markup-parser.html (Ez a rendszer a WikiCreole nyelvet használja: http://www.wikicreole.org/wiki/Creole1.0 ). Persze nem kötelező ezt használni, de az egyszerűség kedvéért mi ezt választottuk.
+
+Mint bizonyára észrevettük a URL-ből, ennek a csomagnak az ég világon semmi köze nincs a Yii-hez, ez csak egy egyszerű PHP osztály, tehát nekünk a második megközelítés lesz a legjobb. Töltsük is le az összecsomagolt állományt és másoljuk be az _application/vendors/_ mappába (ha nincs ilyenünk, csináljunk egyet).
+
+
+
+
 
 = Details =
 
