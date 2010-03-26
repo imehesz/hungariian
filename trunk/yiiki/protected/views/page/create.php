@@ -1,14 +1,9 @@
 <?php
 $this->breadcrumbs=array(
-	'Pages'=>array('index'),
-	'Create',
+	'Yiiki lista'=>array('index'),
+	'Uj Yiiki oldal',
 );
 ?>
-<h1>Create Page</h1>
-
-<ul class="actions">
-	<li><?php echo CHtml::link('List Page',array('index')); ?></li>
-	<li><?php echo CHtml::link('Manage Page',array('admin')); ?></li>
-</ul><!-- actions -->
+<h1>Uj Yiiki oldal keszitese</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

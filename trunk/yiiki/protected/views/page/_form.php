@@ -6,15 +6,17 @@
 
 	<?php echo CHtml::errorSummary($model); ?>
 
-    <div class="row">
-		<?php echo CHtml::activeLabelEx($model,'title'); ?>
-		<?php echo CHtml::activeTextField($model,'title',array('size'=>60,'maxlength'=>125)); ?>
-		<?php echo CHtml::error($model,'title'); ?>
-	</div>
+	<?php if( $model->isNewRecord ) : ?>
+		<div class="row">
+			<?php echo CHtml::activeLabelEx($model,'title'); ?>
+			<?php echo CHtml::activeTextField($model,'title',array('size'=>60,'maxlength'=>125)); ?>
+			<?php echo CHtml::error($model,'title'); ?>
+		</div>
+	<?php endif; ?>
 
 	<div class="row">
 		<?php echo CHtml::activeLabelEx($model,'body'); ?>
-		<?php echo CHtml::activeTextArea($model,'body',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo CHtml::activeTextArea($model,'body',array('rows'=>15, 'cols'=>75)); ?>
 		<?php echo CHtml::error($model,'body'); ?>
 	</div>
 

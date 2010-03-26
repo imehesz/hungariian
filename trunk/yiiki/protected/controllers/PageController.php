@@ -1,13 +1,20 @@
 <?php
 
+
 class PageController extends Controller
 {
+
 	const PAGE_SIZE=10;
 
 	/**
 	 * @var CActiveRecord the currently loaded data model instance.
 	 */
 	private $_model;
+
+	public function init()
+	{
+		Yii::import('application.vendors.*');
+	}
 
 	/**
 	 * @return array action filters
@@ -56,7 +63,7 @@ class PageController extends Controller
 
          if( ! $model )
          {
-             throw new CHttpException(404,'The requested page does not exist.');
+             throw new CHttpException(404,'Sajnos a kert oldal nem letezik.');
          }
 
          $this->render('view',array(
@@ -76,7 +83,7 @@ class PageController extends Controller
 		{
 			$model->attributes=$_POST['Page'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('view','title'=>$model->title));
 		}
 
 		$this->render('create',array(
@@ -90,12 +97,14 @@ class PageController extends Controller
 	 */
 	public function actionUpdate()
 	{
-		$model=$this->loadModel();
+		// $model=$this->loadModel();
+		$title = Yii::app()->request->getParam( 'title' );
+        $model = Page::model()->findByAttributes( array('title' => $title), array('order'=>'revision DESC') );
 		if(isset($_POST['Page']))
 		{
 			$model->attributes=$_POST['Page'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('view','title'=>$model->title));
 		}
 
 		$this->render('update',array(
@@ -107,7 +116,7 @@ class PageController extends Controller
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'index' page.
 	 */
-	public function actionDelete()
+/*	public function actionDelete()
 	{
 		if(Yii::app()->request->isPostRequest)
 		{
@@ -121,7 +130,27 @@ class PageController extends Controller
 		else
 			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
 	}
+*/
 
+	/**
+	 *
+	 */
+	public function actionDelete()
+	{
+		if( Yii::app()->request->isPostRequest )
+		{
+			$id=Yii::app()->request->getParam( 'id' );
+			if( $id )
+			{
+				$model = Page::model()->findByPk( $id );
+				if( $model )
+				{
+					Page::model()->deleteAllByAttributes( array( 'title' => $model->title )  );
+					$this->redirect(array('index'));
+				}
+			}
+		}
+	}
 	/**
 	 * Lists all models.
 	 */
@@ -132,10 +161,10 @@ class PageController extends Controller
         $criteria->order = 'created DESC';
 
 		$dataProvider=new CActiveDataProvider('Page', array(
+            'criteria' => $criteria,
 			'pagination'=>array(
 				'pageSize'=>self::PAGE_SIZE,
 			),
-            'criteria' => $criteria,
 		));
 
 		$this->render('index',array(
