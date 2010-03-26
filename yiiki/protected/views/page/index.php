@@ -1,14 +1,14 @@
 <?php
 $this->breadcrumbs=array(
-	'Pages',
+	'Yiiki listaja',
 );
 ?>
 
-<h1>List Page</h1>
+<h1>Yiiki Lista</h1>
 
 <ul class="actions">
-	<li><?php echo CHtml::link('Create Page',array('create')); ?></li>
-	<li><?php echo CHtml::link('Manage Page',array('admin')); ?></li>
+	<li><?php echo CHtml::link('Uj Yiiki oldal',array('create')); ?></li>
+	<li><?php echo CHtml::link('Admin',array('admin')); ?></li>
 </ul><!-- actions -->
 
 <?php $this->widget('zii.widgets.CListView', array(
