@@ -161,10 +161,8 @@ class PageController extends Controller
         $criteria->order = 'created DESC';
 
 		$dataProvider=new CActiveDataProvider('Page', array(
+			'pagination'=> array( 'pageSize' => self::PAGE_SIZE ),
             'criteria' => $criteria,
-			'pagination'=>array(
-				'pageSize'=>self::PAGE_SIZE,
-			),
 		));
 
 		$this->render('index',array(

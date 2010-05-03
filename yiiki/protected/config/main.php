@@ -35,11 +35,6 @@ return array(
 			),
 		),
 		*/
-		/*
-		'db'=>array(
-			'connectionString' => 'sqlite:protected/data/testdrive.db',
-		),
-		*/
 		'db'=>array(
 			'connectionString' => 'sqlite:protected/data/yiiki.sqlite',
 		),
