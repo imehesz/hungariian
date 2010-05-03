@@ -480,6 +480,15 @@ Attól még, hogy a file ott heverészik a _vendors_ könyvárba, még a Yii nem
 Yii::import('application.vendors.*');
 }}}
 
+Ami kb. annyit jelent, hogy a továbbiakban **Yii** rendszerünk ebben a könyvtárban is keresgélni fog PHP osztályok és file-ok után. (Ezt egyebként beállíthatjuk a _protected/config/main.php_ file-ban is az _import_ tömb segítségével.)
+
+Most már csak annyit kell tennünk, hogy a megfelelő Nézet-ben meghívjuk magát a Wiki értelmezőt és átpasszoljuk neki azt a szöveget amit HTML nyelven szeretnénk megmutatni a felhasználóknak. Ez a Nézet vagy View pedig itt található:
+_protected/views/page/view.php_
+
+{{{
+<?php $wiki = new creole();echo $wiki -> parse( $model->body ); ?>
+}}}
+
 = Details =
 
 Add your content here.  Format your content with:
