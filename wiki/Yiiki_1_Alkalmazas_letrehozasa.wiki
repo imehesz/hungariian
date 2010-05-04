@@ -508,8 +508,8 @@ Kezdetnek reméljük jó lesz. Sok sikert!
 
 = Linkek =
 
-A fő Yii oldal: http://yiiframework.com
+A fő *Yii Framework* oldal: http://yiiframework.com
 
-A Yii Radiio oldal, ami a legújabb Yii-vel kapcsolatos finomságokat foglalja össze: http://yiiradiio.mehesz.net
+A *Yii Radiio* oldal, ami a legújabb Yii-vel kapcsolatos finomságokat foglalja össze: http://yiiradiio.mehesz.net
 
-Magyar fórum: http://www.yiiframework.com/forum/index.php?/forum/33-hungarian/
+*Magyar fórum*: http://www.yiiframework.com/forum/index.php?/forum/33-hungarian/
