@@ -4,7 +4,7 @@
 class PageController extends Controller
 {
 
-	const PAGE_SIZE=10;
+	const PAGE_SIZE=25;
 
 	/**
 	 * @var CActiveRecord the currently loaded data model instance.

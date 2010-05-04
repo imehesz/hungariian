@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 
 <ul class="actions">
 	<li><?php echo CHtml::link('új Yiiki oldal',array('create')); ?></li>
-	<li><?php echo CHtml::link('Admin',array('admin')); ?></li>
+	<?php /* <li><?php echo CHtml::link('Admin',array('admin')); ?></li> */ ?>
 </ul><!-- actions -->
 
 <?php $this->widget('zii.widgets.CListView', array(
