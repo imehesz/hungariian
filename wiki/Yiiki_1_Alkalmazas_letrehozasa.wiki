@@ -489,9 +489,13 @@ _protected/views/page/view.php_
 <?php $wiki = new creole();echo $wiki -> parse( $model->body ); ?>
 }}}
 
+= Ja, még valami =
+
+Már csak egy apróság van hátra. A rendszer, alapból, a _SiteController_ -nek adja át a vezérlést, ha valaki meglátogatja az oldalunkat. Ez szép és jó, de sajnos azon az oldalon csak annyi szerepel, "_Welcome to My Web Application_" és semmilyen link nem utal arra, hogy hol is vannak az oldalaink. Ezt a legegyszerűbben úgy lehet elkerülni, hogy megváltoztatjuk az alapértelmezett Vezérlőt és a _SiteController_ helyett beállítjuk a _PageController_-t, hiszen az a felelős az Oldalak (Page) kezeléséért.
+
 No, és készen is lennénk. Persze nagyon NAGYON sok mindenen lehetne javítani, pl. biztonság/adatbázis védelem, magyarosítás, egységtesztek (unit test) használata, caching-elés stb.
 
-Kezdetnek reméljük jó lesz.  
+Kezdetnek reméljük jó lesz. Sok sikert!
 
 
 
