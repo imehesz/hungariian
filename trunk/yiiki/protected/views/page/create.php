@@ -1,9 +1,9 @@
 <?php
 $this->breadcrumbs=array(
 	'Yiiki lista'=>array('index'),
-	'Uj Yiiki oldal',
+	'Új Yiiki oldal',
 );
 ?>
-<h1>Uj Yiiki oldal keszitese</h1>
+<h1>Új Yiiki oldal készítése</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

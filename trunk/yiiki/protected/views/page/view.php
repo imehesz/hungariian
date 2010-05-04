@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 <h1><?php echo strtoupper($model->title); ?></h1>
 
 <div>
-	<?php echo CHtml::link('Oldal Frissitese',array('update','title'=>$model->title)); ?>
-	<?php echo CHtml::linkButton('Oldal Torlese',array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Biztos, hogy toroljem?')); ?>
+	<?php echo CHtml::link('Oldal Frissítése',array('update','title'=>$model->title)); ?>
+	<?php echo CHtml::linkButton('Oldal Törlese',array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Biztos, hogy töröljem?')); ?>
 </div>
 
 <div style="margin-top:20px;background-color:#efefef;padding:10px;">
