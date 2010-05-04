@@ -489,6 +489,12 @@ _protected/views/page/view.php_
 <?php $wiki = new creole();echo $wiki -> parse( $model->body ); ?>
 }}}
 
+No, és készen is lennénk. Persze nagyon NAGYON sok mindenen lehetne javítani, pl. biztonság/adatbázis védelem, magyarosítás, egységtesztek (unit test) használata, caching-elés stb.
+
+Kezdetnek reméljük jó lesz.  
+
+
+
 = Details =
 
 Add your content here.  Format your content with:
