@@ -491,17 +491,25 @@ _protected/views/page/view.php_
 
 = Ja, még valami =
 
-Már csak egy apróság van hátra. A rendszer, alapból, a _SiteController_ -nek adja át a vezérlést, ha valaki meglátogatja az oldalunkat. Ez szép és jó, de sajnos azon az oldalon csak annyi szerepel, "_Welcome to My Web Application_" és semmilyen link nem utal arra, hogy hol is vannak az oldalaink. Ezt a legegyszerűbben úgy lehet elkerülni, hogy megváltoztatjuk az alapértelmezett Vezérlőt és a _SiteController_ helyett beállítjuk a _PageController_-t, hiszen az a felelős az Oldalak (Page) kezeléséért.
+Már csak egy apróság van hátra. A rendszer, alapból, a _SiteController_ -nek adja át a vezérlést, ha valaki meglátogatja az oldalunkat. Ez szép és jó, de sajnos azon az oldalon csak annyi szerepel, "_Welcome to My Web Application_" és semmilyen link nem utal arra, hogy hol is vannak az oldalaink. Ezt a legegyszerűbben úgy lehet elkerülni, hogy megváltoztatjuk az alapértelmezett *Vezérlő*-t és a _SiteController_ helyett beállítjuk a _PageController_-t, hiszen az a felelős az Oldalak (Page) kezeléséért. Ja, és ha már úgyis a konfigurációs _protected/config/main.php_ file-ban kell kotorásznunk, akkor be is állíthatjuk a programunk nevét (ami több más helyen is feltűnik, pl. a böngésző _title_ -jében is)
 
-No, és készen is lennénk. Persze nagyon NAGYON sok mindenen lehetne javítani, pl. biztonság/adatbázis védelem, magyarosítás, egységtesztek (unit test) használata, caching-elés stb.
+{{{
+  return array(
+  ....
+    'name'=>'Yiiki - Wikis rendszer Yii-vel',
+    'defaultController' => 'Page',
+  ...);
+}}}
+
+
+No, és készen is lennénk. Persze nagyon NAGYON sok mindenen lehetne javítani-szépíteni, pl. biztonság/adatbázis védelem, magyarosítás, egységtesztek (unit test) használata, caching-elés stb. de talán majd máskor.
 
 Kezdetnek reméljük jó lesz. Sok sikert!
 
+= Linkek =
 
+A fő Yii oldal: http://yiiframework.com
 
-= Details =
+A Yii Radiio oldal, ami a legújabb Yii-vel kapcsolatos finomságokat foglalja össze: http://yiiradiio.mehesz.net
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Magyar fórum: http://www.yiiframework.com/forum/index.php?/forum/33-hungarian/
