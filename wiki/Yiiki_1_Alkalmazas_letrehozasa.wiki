@@ -51,7 +51,7 @@ Az is fontos, hogy a Yii rendszer a parancssorból is futtatható legyen (_PHP C
 
 = 2. A WEB-es alkalmazás létrehozása =
 
-Az alap alkalmazás létrehozása rendkívül egyszerű, csak adjuk ki a kovetkező utasítást (a web szerver ROOT könyvtárában állva, (pl /var/www). 
+Az alap alkalmazás létrehozása rendkívül egyszerű, csak adjuk ki a kovetkező utasítást (a web szerver _root_ könyvtárában állva, (pl /var/www). 
 
 {{{./yii/framework/yiic webapp yiiki}}}
 
