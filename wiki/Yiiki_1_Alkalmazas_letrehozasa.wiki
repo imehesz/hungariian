@@ -378,7 +378,7 @@ Még annyit érdemes megjegyezni, hogy ha a _save()_ függvényt _false_ paramé
 
 == 7.4 Az oldalakat lekérő SQL módosítása és a hozzá tartozó View (Nézet) testreszabása ==
 
-Ha most néznénk meg az Oldalak listáját, azt vennénk észre, hogy programunk, az egyes Oldalakhoz tartozó összes reviziót megmutatja. Ez ideáig rendben is van, hiszen minden egyes változatot "új"-ként mentettünk el, azonban ez elég zavaró lehet, meg hülyén is néz ki. Ha eddig még nem említettük volna, majd minden *Controller*-nek van egy úgynevezett _actionIndex()_-je ami az alapértelmezett függvény. Jelen esetünkben ez szolgáltatja az Oldalak listáját. Keressük is meg a _PageController_-ben és módosítsuk a következők szerint:
+Ha most néznénk meg az Oldalak listáját, azt vennénk észre, hogy programunk, az egyes Oldalakhoz tartozó összes reviziót megmutatja. Ez ideáig rendben is van, hiszen minden egyes változatot "új"-ként mentettünk el, azonban ez elég zavaró lehet, meg bugyután is néz ki. Ha eddig még nem említettük volna, majd minden *Controller*-nek van egy úgynevezett _actionIndex()_-je ami az alapértelmezett függvény. Jelen esetünkben ez szolgáltatja az Oldalak listáját. Keressük is meg a _PageController_-ben és módosítsuk a következők szerint:
 
 protected/controllers/PageController.php - actionIndex()
 
