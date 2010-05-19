@@ -26,9 +26,9 @@ _- Ubuntu Linux (9.10)
 
 - Yii 1.1.x
 
-- A forráskód pedig a __ROOT__ alatt érhető el (pl: /var/www/yiiki)
+- Csomagoljuk ki a letöltött Yii-t a web szerverünk fő könyvtárába (pl. /var/www/yii ), a forráskód majd szintén a /var/www alá kerül (pl: /var/www/yiiki).
 
-Az is fontos, hogy a Yii rendszer a parancssorból is futtatható legyen (_PHP CLI_)
+Az is fontos, hogy a Yii rendszer a parancssorból is futtatható legyen! (_PHP CLI_)
 
 = 1. Adatbázis Felépítése =
 
