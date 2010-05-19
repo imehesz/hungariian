@@ -8,7 +8,7 @@ Itt csak felsorolnék néhány alapvető (és igen fontos) fogalmat, amelyek ism
 
 - *Objektum Orientált Programozás (PHP 5)*: A jelenleg stabil Yii 1.1-es verzió a PHP 5.1-en alapszik, tehát annak ismerete mindenképp szükséges. ( http://hu.wikipedia.org/wiki/Objektumorientált_programozás )
 
-- *Adatbázis (SQL)*: A Yii alapból sokféle adatbázis formátumot tartalmaz. (Az itteni példában én a SQLite-ot választottam, mert nem igényel különösebben bonyolult szerver oldali beállítást) ( http://hu.wikipedia.org/wiki/SQL )
+- *Adatbázis (SQL)*: A Yii, alapból sokféle adatbázis formátumot támogat. (Az itteni példában én a SQLite-ot választottam, mert nem igényel különösebben bonyolult szerver oldali beállítást) ( http://hu.wikipedia.org/wiki/SQL )
 
 - *MVC (Model-View-Controller) avagy Modell-Nézet-Vezérlő*: A Yii az egy MVC-t szorosan követő keretrendszer. Dióhéjban annyit jelent, hogy az alkalmazás jól elkülöníthető 3 részre. Az M vagy modell, ami az adatbázis jellegű lekérdezéseket végzi, a C vagy vezérlő ami kapcsolatot teremt és feldolgoz felhasználók által bevitt információt és végül a V vagy nézet, ami pedig magát a megjelenítést végzi. Ilyen többek között a Ruby On Rails rendszer is.( http://hu.wikipedia.org/wiki/MVC )
 
