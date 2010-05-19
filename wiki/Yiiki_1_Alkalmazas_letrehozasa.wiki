@@ -24,7 +24,7 @@ _- Ubuntu Linux (9.10)
 
 - PHP 5.2.x
 
-- Yii 1.1.1
+- Yii 1.1.x
 
 - A forráskód pedig a __ROOT__ alatt érhető el (pl: /var/www/yiiki)
 
