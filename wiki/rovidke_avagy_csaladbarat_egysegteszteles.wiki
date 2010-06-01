@@ -2,6 +2,8 @@
 
 = Introduction =
 
+_"Ismeret az nem cselekedet, csakis cselekedet a cselekedet"_ - tdc10
+
 = Táblák =
 
 {{{
