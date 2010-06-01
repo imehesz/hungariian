@@ -2,6 +2,19 @@
 
 = Introduction =
 
++ Táblák =
+
+{{{
+++++++++++++++++++++++++++
++ urls                   +
+++++++++++++++++++++++++++
++ id INT (auto_increment)+
++ url TEXT               +
++ shortened VARCHAR(50)  +
++ created INT            +
+++++++++++++++++++++++++++
+}}}
+
 Add your content here.
 
 
