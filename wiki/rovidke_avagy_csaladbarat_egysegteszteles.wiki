@@ -15,8 +15,7 @@
 ++++++++++++++++++++++++++
 }}}
 
-SQLite3
-
+*SQLite3*
 {{{
 CREATE TABLE urls (created INTEGER, id INTEGER PRIMARY KEY, shortened varchar(50), updated INTEGER, url TEXT);
 }}}
