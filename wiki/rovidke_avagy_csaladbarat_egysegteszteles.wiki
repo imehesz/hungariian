@@ -1,3 +1,5 @@
+http://code.google.com/images/code_sm.png
+
 #Hogyan gyártsunk Egységtesztelős programot Yii-vel (Test Driven Development)
 
 http://code.google.com/images/code_sm.png
