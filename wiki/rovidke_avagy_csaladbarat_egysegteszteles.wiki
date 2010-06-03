@@ -83,6 +83,17 @@ _protected/config/test.php_
 ...
 }}}
 
+/protected/tests/
+{{{
+$phpunit unit
+...
+There was 1 error:
+
+1) testCreate(UrlTest)
+CDbException: The table "urls" for active record class "Url" cannot be found in the database.
+...
+}}}
+
 Add your content here.
 
 
