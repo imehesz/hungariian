@@ -76,6 +76,12 @@ FAILURES!
 Tests: 1, Assertions: 0, Errors: 1.
 }}}
 
+_protected/config/test.php_
+{{{
+...
+ 'connectionString'=>'sqlite:' . dirname(__FILE__).'/../rovidke_test.db',
+...
+}}}
 
 Add your content here.
 
