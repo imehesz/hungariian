@@ -54,36 +54,7 @@ If you have a 'db' database connection, you can test these models now with:
 }}}
 
 _protected/tests/_
-{{{
-PHPUnit 3.3.16 by Sebastian Bergmann.
 
-E
-
-Time: 0 seconds
-
-There was 1 error:
-
-1) testCreate(UrlTest)
-CDbException: CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: sqlite_sequence
-/var/www/yii-svn/framework/db/CDbCommand.php:228
-/var/www/yii-svn/framework/db/schema/sqlite/CSqliteSchema.php:38
-/var/www/yii-svn/framework/test/CDbFixtureManager.php:244
-/var/www/yii-svn/framework/test/CDbFixtureManager.php:139
-/var/www/yii-svn/framework/test/CDbFixtureManager.php:296
-/var/www/yii-svn/framework/test/CDbTestCase.php:116
-
-FAILURES!
-Tests: 1, Assertions: 0, Errors: 1.
-}}}
-
-_protected/config/test.php_
-{{{
-...
- 'connectionString'=>'sqlite:' . dirname(__FILE__).'/../rovidke_test.db',
-...
-}}}
-
-/protected/tests/
 {{{
 $phpunit unit
 ...
@@ -93,6 +64,14 @@ There was 1 error:
 CDbException: The table "urls" for active record class "Url" cannot be found in the database.
 ...
 }}}
+
+_protected/config/test.php_
+{{{
+...
+ 'connectionString'=>'sqlite:' . dirname(__FILE__).'/../rovidke_test.db',
+...
+}}}
+
 
 
 {{{
