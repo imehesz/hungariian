@@ -73,8 +73,9 @@ _protected/config/test.php_
 }}}
 
 
-
+_protected/tests/_
 {{{
+$phpunit unit
 PHPUnit 3.3.16 by Sebastian Bergmann.
 
 .
