@@ -21,7 +21,7 @@ _"Ismeret az nem cselekedet, csakis cselekedet a cselekedet"_ - tdc10
 
 *SQLite3*
 {{{
-CREATE TABLE urls (created INTEGER, id INTEGER PRIMARY KEY, shortened varchar(50), updated INTEGER, url TEXT);
+CREATE TABLE urls (created INTEGER, id INTEGER PRIMARY KEY AUTOINCREMENT, shortened varchar(50), updated INTEGER, url TEXT);
 }}}
 
 _protected/config/main.php_
