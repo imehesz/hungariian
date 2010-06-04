@@ -99,6 +99,26 @@ _protected/tests/unit/UrlTest.php_
     }
 ...
 }}}
+
+{{{
+$phpunit unit
+
+PHPUnit 3.3.16 by Sebastian Bergmann.
+
+F.
+
+Time: 0 seconds
+
+There was 1 failure:
+
+1) testTrue(UrlTest)
+Failed asserting that <boolean:false> is true.
+/var/www/rovidke/protected/tests/unit/UrlTest.php:18
+
+FAILURES!
+Tests: 2, Assertions: 2, Failures: 1.
+
+}}}
 Add your content here.
 
 
