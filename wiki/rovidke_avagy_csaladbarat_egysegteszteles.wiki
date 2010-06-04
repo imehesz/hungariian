@@ -84,6 +84,21 @@ Time: 0 seconds
 
 OK (1 test, 0 assertions)
 }}}
+
+_protected/tests/unit/UrlTest.php_
+{{{
+...
+    public function testTrue()
+    {
+        $this->assertTrue( false );
+    }
+
+    public function testTrue2()
+    {
+        $this->assertTrue( true );
+    }
+...
+}}}
 Add your content here.
 
 
