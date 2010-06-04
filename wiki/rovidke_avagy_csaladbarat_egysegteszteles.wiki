@@ -94,6 +94,16 @@ CDbException: The table "urls" for active record class "Url" cannot be found in 
 ...
 }}}
 
+
+{{{
+PHPUnit 3.3.16 by Sebastian Bergmann.
+
+.
+
+Time: 0 seconds
+
+OK (1 test, 0 assertions)
+}}}
 Add your content here.
 
 
