@@ -9,7 +9,7 @@ return CMap::mergeArray(
 			),
 			// uncomment the following to provide test database connection
 			'db'=>array(
-				'connectionString'=>'sqlite:' . dirname(__FILE__).'/../rovidke_test.db',
+				'connectionString'=>'sqlite:' . dirname(__FILE__).'/../data/rovidke_test.db',
 			),		
 		),
 	)
