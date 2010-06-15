@@ -130,6 +130,23 @@ Tests: 2, Assertions: 2, Failures: 1.
     }
 ...
 }}}
+
+_protected/yiic shell_
+{{{
+>> crud Url
+   generate UrlController.php
+   generate UrlTest.php
+      mkdir /var/www/rovidke/protected/views/url
+   generate create.php
+   generate update.php
+   generate index.php
+   generate view.php
+   generate admin.php
+   generate _form.php
+   generate _view.php
+   generate _search.php
+
+}}}
 Add your content here.
 
 
