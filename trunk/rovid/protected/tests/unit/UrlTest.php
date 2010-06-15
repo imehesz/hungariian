@@ -6,8 +6,36 @@ class UrlTest extends CDbTestCase
 		'urls'=>'Url',
 	);
 
-	public function testCreate()
+	/*
+    public function testCreate()
 	{
 
 	}
+    */
+
+    /*
+    public function testTrue()
+    {
+        $this->assertTrue( false );
+    }
+
+    public function testTrue2()
+    {
+        $this->assertTrue( true );
+    }
+    */
+
+    public function testCountAll()
+    {
+        $urls = sizeof(Url::model()->findAll());
+        $this->assertEquals( 2, $urls );
+    }
+
+    public function testActionView()
+    {
+        $url = Url::model()->findByAttributes( array( 'id' => 2 ) );
+
+        $this->assertTrue( $url instanceof Url );
+        $this->assertEquals( $url->url, 'http://weblabor.hu' );
+    }
 }
