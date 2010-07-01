@@ -38,4 +38,15 @@ class UrlTest extends CDbTestCase
         $this->assertTrue( $url instanceof Url );
         $this->assertEquals( $url->url, 'http://weblabor.hu' );
     }
+
+    public function testUrlRequired()
+    {
+        $this->assertTrue( Url::model()->isAttributeRequired( 'url' ) );
+    }
+
+    public function testSlugRequired()
+    {
+        $this->assertTrue( Url::model()->isAttributeRequired( 'shortened' ) );
+    }
+   
 }
