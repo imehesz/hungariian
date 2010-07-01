@@ -182,6 +182,28 @@ _protected/tests/unit/UrlTest.php_
   $url = Url::model()->findByAttributes( array( 'id' => 2 ) );
 ...
 }}}
+
+_protected/tests/unit/UrlTest.php_
+{{{
+...
+    public function testUrlRequired()
+    {
+        $this->assertTrue( Url::model()->isAttributeRequired( 'url' ) );
+    }
+...
+}}}
+
+_protected/models/Url.php_
+{{{
+...
+    return array(
+       ...
+       array( 'url', 'required' ),
+       ...
+    );
+...
+}}}
+
 Add your content here.
 
 
