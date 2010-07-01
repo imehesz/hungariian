@@ -36,6 +36,7 @@ class Url extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+            array( 'url,shortened', 'required' ),
 			array('created', 'numerical', 'integerOnly'=>true),
 			array('shortened', 'length', 'max'=>50),
 			array('url', 'safe'),
