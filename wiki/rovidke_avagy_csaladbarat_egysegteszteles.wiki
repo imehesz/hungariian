@@ -204,6 +204,27 @@ _protected/models/Url.php_
 ...
 }}}
 
+_protected/tests/unit/UrlTest.php_
+{{{
+...
+    public function testSlugRequired()
+    {
+        $this->assertTrue( Url::model()->isAttributeRequired( 'slug' ) );
+    }
+...
+}}}
+
+_protected/models/Url.php_
+{{{
+...
+    return array(
+       ...
+       array( 'url,slug', 'required' ),
+       ...
+    );
+...
+}}}
+
 Add your content here.
 
 
