@@ -251,6 +251,33 @@ _protected/views/url/_form.php_
 ...
 }}}
 
+_protected/tests/unit/UrlTest.php_
+{{{
+...
+    public function testCreateSlug()
+    {
+        $url = new Url();
+        $url->setAttributes( array( 'url' => 'http://www.weblabor.hu' ) );
+        $url->save();
+        $this->assertEquals( 'AA', $url->shortened );
+    }
+...
+}}}
+
+_protected/models/Url.php_
+{{{
+    public function beforeValidate()
+    {
+        $this->shortened = $this->createSlug();
+        return parent::beforeValidate();
+    }
+
+    public function createSlug()
+    {
+       return 'AA'; 
+    }
+}}}
+
 Add your content here.
 
 
