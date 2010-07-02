@@ -278,6 +278,47 @@ _protected/models/Url.php_
     }
 }}}
 
+{{{
+    public function createSlug()
+    {
+        $slug = Url::model()->find( array( 'order' => 'shortened DESC' ) )->shortened;
+
+        if( ! $slug )
+        {
+            $slug = 'AA';
+        }
+        else
+        {
+            ++$slug;
+        }
+
+        return $slug; 
+    }
+}}}
+
+_protected/tests/unit/UrlTest.php_
+{{{
+...
+    public function testCreateSlug()
+    {
+        $url = new Url();
+        $url->setAttributes( array( 'url' => 'http://www.weblabor.hu' ) );
+        $url->save();
+        $this->assertEquals( 'AB', $url->shortened );
+    }
+...
+}}}
+
+{{{
+...
+    public function createSlug()
+    {
+        $slug = Url::model()->find( array( 'order' => 'shortened DESC' ) )->shortened;
+        return $slug ? ++$slug : 'AA';
+    }
+...
+}}}
+
 Add your content here.
 
 
