@@ -3,12 +3,12 @@
 return array(
 	'sample1'=>array(
 		'created' => '1234567890',
-		'shortened' => 'A',
+		'shortened' => 'AA',
 		'url' => 'http://google.com',
 	),
 	'sample2'=>array(
 		'created' => '1234567890',
-		'shortened' => 'B',
+		'shortened' => 'AB',
 		'url' => 'http://weblabor.hu',
 	),
 );

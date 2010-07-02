@@ -93,4 +93,16 @@ class Url extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+    public function beforeValidate()
+    {
+        $this->shortened = $this->createSlug();
+        return parent::beforeValidate();
+    }
+
+    public function createSlug()
+    {
+        $slug = Url::model()->find( array( 'order' => 'shortened DESC' ) )->shortened;
+        return $slug ? ++$slug : 'AA';
+    }
 }

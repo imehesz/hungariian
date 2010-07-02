@@ -48,5 +48,21 @@ class UrlTest extends CDbTestCase
     {
         $this->assertTrue( Url::model()->isAttributeRequired( 'shortened' ) );
     }
-   
+
+/*  public function testCreateSlug()
+    {
+        $slug = new Url();
+        $this->assertTrue( $slug->createSlug() );
+        $this->assertTrue($slug->save() );
+        echo $slug->id;
+    }
+*/
+
+    public function testCreateSlug()
+    {
+        $url = new Url();
+        $url->setAttributes( array( 'url' => 'http://www.weblabor.hu' ) );
+        $url->save();
+        $this->assertEquals( 'AC', $url->shortened );
+    }
 }
