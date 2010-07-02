@@ -9,6 +9,7 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
+    <?php /*
 	<div class="row">
 		<?php echo $form->labelEx($model,'created'); ?>
 		<?php echo $form->textField($model,'created'); ?>
@@ -20,10 +21,12 @@
 		<?php echo $form->textField($model,'shortened',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'shortened'); ?>
 	</div>
+    */ 
+    ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'url'); ?>
-		<?php echo $form->textArea($model,'url',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textField($model,'url', array( 'size' => 50 )); ?>
 		<?php echo $form->error($model,'url'); ?>
 	</div>
 
