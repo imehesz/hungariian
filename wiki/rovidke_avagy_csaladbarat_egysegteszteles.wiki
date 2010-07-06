@@ -324,6 +324,27 @@ _protected/tests/unit/UrlTest.php_
 ...
 }}}
 
+_protected/config/main.php_
+{{{
+...
+    'defaultController'    => 'url/create',
+...
+}}}
+
+_protected/controllers/UrlController.php
+{{{
+...
+			array('allow',  // allow all users to perform 'index' and 'view' actions
+				'actions'=>array('index','view', 'create'),
+				'users'=>array('*'),
+			),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('update'),
+				'users'=>array('@'),
+			),
+...
+}}}
+
 Add your content here.
 
 
