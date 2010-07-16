@@ -96,7 +96,8 @@ class Url extends CActiveRecord
 
     public function beforeValidate()
     {
-        $this->shortened = $this->createSlug();
+        $this->shortened    = $this->createSlug();
+        $this->created      = time();
         return parent::beforeValidate();
     }
 
