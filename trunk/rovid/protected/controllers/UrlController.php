@@ -32,11 +32,11 @@ class UrlController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','create','redirect'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('update'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -148,6 +148,26 @@ class UrlController extends Controller
 			'model'=>$model,
 		));
 	}
+
+    public function actionRedirect()
+    {
+        $slug = $_GET[ 'slug' ];
+
+        // let's see if we got a SLUG
+        if( $slug )
+        {
+            $url = Url::model()->find( 'shortened=:slug', array( ':slug' => $slug ) )->url;
+            if( $url )
+            {
+                Yii::app()->request->redirect( $url );
+            }
+            else
+            {
+                throw new CHttpException(404,'The requested page does not exist.');
+            }
+        }
+
+    }
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.

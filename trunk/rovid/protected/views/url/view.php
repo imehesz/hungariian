@@ -15,6 +15,9 @@ $this->menu=array(
 
 <h1>View Url #<?php echo $model->id; ?></h1>
 
+<?php echo CHtml::link( $_SERVER['SERVER_NAME'] . '/' . $model->shortened, 'http://' . $_SERVER['SERVER_NAME'] . '/' . $model->shortened ); ?>
+
+<?php /*
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
@@ -24,3 +27,4 @@ $this->menu=array(
 		'url',
 	),
 )); ?>
+*/ ?>
