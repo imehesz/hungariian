@@ -14,14 +14,14 @@ _"Ismeret az nem cselekedet, csakis cselekedet a cselekedet"_ - tdc10
 ++++++++++++++++++++++++++
 + id INT (auto_increment)+
 + url TEXT               +
-+ slug VARCHAR(50)  +
++ slug VARCHAR(50)       +
 + created INT            +
 ++++++++++++++++++++++++++
 }}}
 
 *SQLite3*
 {{{
-CREATE TABLE urls (created INTEGER, id INTEGER PRIMARY KEY AUTOINCREMENT, slug varchar(50), updated INTEGER, url TEXT);
+CREATE TABLE urls (created INTEGER, id INTEGER PRIMARY KEY AUTOINCREMENT, slug varchar(50), url TEXT);
 }}}
 
 _protected/config/main.php_
@@ -124,6 +124,23 @@ Failed asserting that <boolean:false> is true.
 FAILURES!
 Tests: 2, Assertions: 2, Failures: 1.
 
+}}}
+
+Fixtures
+
+{{{
+return array(
+	'sample1'=>array(
+		'created' => '1234567890',
+		'slug' => 'AA',
+		'url' => 'http://weblabor.hu',
+	),
+	'sample2'=>array(
+		'created' => '1234567890',
+		'slug' => 'AB',
+		'url' => 'http://google.com',
+	),
+);
 }}}
 
 {{{
