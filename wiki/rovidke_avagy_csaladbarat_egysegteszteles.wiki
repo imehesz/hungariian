@@ -38,7 +38,7 @@ CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 
 
 {{{
 ./protected/yiic shell
-Yii Interactive Tool v1.1 (based on Yii v1.1.3-dev)
+Yii Interactive Tool v1.1 (based on Yii v1.1.3)
 Please type 'help' for help. Type 'exit' to quit.
 >> _
 }}}
