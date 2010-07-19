@@ -284,7 +284,7 @@ _protected/tests/unit/UrlTest.php_
     public function testCreateSlug()
     {
         $url = new Url();
-        $url->save();
+        $this->assertTrue( $url->save(), 'URL tarolas teszteles' );
         $this->assertEquals( $url->slug, 'AA' );
     }
 ...
