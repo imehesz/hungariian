@@ -335,6 +335,13 @@ _protected/yiic shell_
 
 }}}
 
+_protected/config/main.php_
+{{{
+...
+    'defaultController'    => 'url/create',
+...
+}}}
+
 _protected/views/url/_form.php_
 {{{
 ...
@@ -358,13 +365,6 @@ _protected/views/url/_form.php_
 		<?php echo $form->textField($model,'url', array( 'size' => 50 )); ?>
 		<?php echo $form->error($model,'url'); ?>
 	</div>
-...
-}}}
-
-_protected/config/main.php_
-{{{
-...
-    'defaultController'    => 'url/create',
 ...
 }}}
 
