@@ -143,6 +143,14 @@ return array(
 );
 }}}
 
+_protected/tests_
+{{{
+$phpunit unit/
+...
+  Failed asserting that <integer:2> matches expected value <integer:1>.
+...
+}}}
+
 {{{
 ...
     public function testCountAll()
