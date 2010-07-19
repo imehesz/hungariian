@@ -14,7 +14,7 @@ _"Ismeret az nem cselekedet, csakis cselekedet a cselekedet"_ - tdc10
 ++++++++++++++++++++++++++
 + id INT (auto_increment)+
 + url TEXT               +
-+ shortened VARCHAR(50)  +
++ slug VARCHAR(50)  +
 + created INT            +
 ++++++++++++++++++++++++++
 }}}
