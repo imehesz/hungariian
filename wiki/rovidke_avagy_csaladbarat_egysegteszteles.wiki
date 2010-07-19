@@ -281,10 +281,11 @@ _protected/views/url/_form.php_
 _protected/tests/unit/UrlTest.php_
 {{{
 ...
-    public function testCreateSlug()
+    public function testCreateUrl()
     {
         $url = new Url();
-        $this->assertTrue( $url->save(), 'URL tarolas teszteles' );
+        $url->setAttribute( 'url', 'http://altavista.hu' );
+        $this->assertTrue( $url->save(), 'URL tarolas tesztelese' );
         $this->assertEquals( $url->slug, 'AA' );
     }
 ...
