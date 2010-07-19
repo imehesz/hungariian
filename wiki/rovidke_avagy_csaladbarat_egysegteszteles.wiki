@@ -126,7 +126,7 @@ Tests: 2, Assertions: 2, Failures: 1.
 
 }}}
 
-Fixtures
+= Fixtures - Minta Adat =
 
 {{{
 return array(
