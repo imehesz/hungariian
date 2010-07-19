@@ -307,6 +307,7 @@ _protected/tests/unit/UrlTest.php_
 ...
 }}}
 
+_protected/models/Url.php_
 {{{
 ...
     public function createSlug()
