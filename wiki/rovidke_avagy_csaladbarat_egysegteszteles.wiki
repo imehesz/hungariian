@@ -345,6 +345,21 @@ _protected/controllers/UrlController.php
 ...
 }}}
 
+_protected/config/main.php_
+{{{
+...
+        'urlManager'=>array(
+             'urlFormat'=>'path',
+             'rules'=>array(
+                 '/<slug:[A-Z]+>' => 'url/redirect',
+                 '<controller:\w+>/<id:\d+>'=>'<controller>/view',
+                 '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<act    ion>',
+                 '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+             ),
+         ),
+...
+}}}
+
 Add your content here.
 
 
