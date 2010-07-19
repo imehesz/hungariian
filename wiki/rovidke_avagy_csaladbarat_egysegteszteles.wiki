@@ -186,7 +186,7 @@ _protected/tests/unit/UrlTest.php_
         $url = Url::model()->findByAttributes( array( 'id' => 1 ) );
 
         $this->assertTrue( $url instanceof Url );
-        $this->assertEquals( $url->url, 'http://weblabor.hu' );
+        $this->assertEquals( $url->url, 'http://altavizsla.hu' );
     }
 ...
 }}}
@@ -197,12 +197,9 @@ $phpunit unit
 ...
 There was 1 failure:
 
-   1) testActionView(UrlTest)
-   Failed asserting that two strings are equal.
-   expected string <http://google.com>
-   difference      <       xxxxxxxxxx?>
-   got string      <http://weblabor.hu>
-   /var/www/rovidke/protected/tests/unit/UrlTest.php:39
+expected string <http://weblabor.hu>
+difference      <       xxxxxxxxxxx??>
+got string      <http://altavizsla.hu>
 ...
 }}}
 
