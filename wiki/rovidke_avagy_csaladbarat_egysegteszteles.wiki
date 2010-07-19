@@ -284,9 +284,8 @@ _protected/tests/unit/UrlTest.php_
     public function testCreateSlug()
     {
         $url = new Url();
-        $url->setAttributes( array( 'url' => 'http://www.weblabor.hu' ) );
         $url->save();
-        $this->assertEquals( 'AA', $url->shortened );
+        $this->assertEquals( $url->slug, 'AA' );
     }
 ...
 }}}
