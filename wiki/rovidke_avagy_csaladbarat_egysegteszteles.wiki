@@ -382,6 +382,32 @@ _protected/views/url/_form.php_
 ...
 }}}
 
+_protected/views/url/view.php_
+{{{
+<?php 
+    echo 
+        CHtml::link( 
+            'http://' . $_SERVER['SERVER_NAME'] . '/' . $model->slug, 
+            'http://' . $_SERVER['SERVER_NAME'] . '/' . $model->slug 
+        );
+?>
+
+<?php 
+/*
+$this->widget('zii.widgets.CDetailView', array(
+	'data'=>$model,
+	'attributes'=>array(
+		'created',
+		'id',
+		'slug',
+		'updated',
+		'url',
+	),
+)); 
+*/
+?>
+}}}
+
 _protected/config/main.php_
 {{{
 ...
