@@ -384,14 +384,15 @@ _protected/views/url/_form.php_
 
 _protected/views/url/view.php_
 {{{
+...
 <?php 
     echo 
         CHtml::link( 
             'http://' . $_SERVER['SERVER_NAME'] . '/' . $model->slug, 
-            'http://' . $_SERVER['SERVER_NAME'] . '/' . $model->slug 
+            $this->createUrl( '/' . $model->slug ) 
         );
 ?>
-
+...
 <?php 
 /*
 $this->widget('zii.widgets.CDetailView', array(
@@ -413,6 +414,7 @@ _protected/config/main.php_
 ...
         'urlManager'=>array(
              'urlFormat'=>'path',
+             'showScriptName' => false,
              'rules'=>array(
                  '/<slug:[A-Z]+>' => 'url/redirect',
                  '<controller:\w+>/<id:\d+>'=>'<controller>/view',
