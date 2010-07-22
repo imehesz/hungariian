@@ -449,6 +449,35 @@ RewriteRule ^.*$ - [NC,L]
 RewriteRule ^.*$ index.php [NC,L]
 }}}
 
+_protected/controllers/UrlController.php_
+{{{
+...
+    public function accessRules()
+    {
+       ...
+          array('allow',  // allow all users to perform 'index' and 'view' actions
+		  'actions'=>array('index','view','create','redirect'),
+		  'users'=>array('*'),
+		),    
+       ...
+    }
+...
+    public function actionRedirect()
+    {
+        $slug = Yii::app()->request->getParam( 'slug', null );
+        if( $slug )
+        {
+            $url = Url::model()->findByAttributes( array( 'slug' => $slug ) );
+            if( $url )
+            {
+                $this->redirect( Url::model()->findByAttributes( array( 'slug' => $slug ) )->url );
+            }
+        }
+
+        throw new CHttpException( '404', 'hmmm ... slug not found!' );
+    }
+...
+}}}
 Add your content here.
 
 
