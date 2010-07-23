@@ -20,12 +20,12 @@ Ezt talán úgy lehetne a legegyszerűbben bemutatni, hogy képzeljünk el egy a
 
 http://mehesz.net/downloads/ttd.png
 
-1. Írjunk tesztet
-2. Ellenőrizzük, hogy a tesztünk hibázik (FAIL)
-3. Írjuk meg (a legegyszerűbben!) a kívánt kódot úgy, hogy a tesztünk sikeres legyen.
-4. Nézzük meg, hogy a tesztünk sikeres e (PASS)
-5. Módosítsuk a kódunkat (úgy, hogy a teszt mindig sikeres maradjon!)
-6. Kezdjük előlről az egészet.
+#. Írjunk tesztet
+#. Ellenőrizzük, hogy a tesztünk hibázik (FAIL)
+#. Írjuk meg (a legegyszerűbben!) a kívánt kódot úgy, hogy a tesztünk sikeres legyen.
+#. Nézzük meg, hogy a tesztünk sikeres e (PASS)
+#. Módosítsuk a kódunkat (úgy, hogy a teszt mindig sikeres maradjon!)
+#. Kezdjük előlről az egészet.
 
 Ez elsőre, másodikra de talán még harmadikra is érdekesen hangozhat, de reméljük a cikk végén minden világos lesz.
 
