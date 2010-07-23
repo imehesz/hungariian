@@ -29,6 +29,12 @@ http://mehesz.net/downloads/ttd.png
 
 Ez elsőre, másodikra de talán még harmadikra is érdekesen hangozhat, de reméljük a cikk végén minden világos lesz.
 
+*Unit Test* - Egységteszt.
+
+Az egységek, komponensek tesztelése, hogy megbizonyosodjunk a működésének helyességéről. Cél, hogy feltárja nincsenek-e tévműködések, feltáratlan hibák a belső algoritmusban, adatkezelésben. A komponensek más rendszer komponensektől függetlenül vannak tesztelve. /az implementáló feladata, felelőssége/
+
+(http://www.dcs.vein.hu/)
+
 (ja, itt ajánlanám [http://weblabor.hu/konyvek/test-driven-development-by-example Török Gábor] írását.) 
 
 http://code.google.com/images/code_sm.png
