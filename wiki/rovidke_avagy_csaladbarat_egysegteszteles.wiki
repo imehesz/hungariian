@@ -16,7 +16,9 @@ Egy nagyon egyszerű URL rövidítőt fogunk késziteni, mint pl a http://tinyur
 
 *Test Driven Development (TDD)* - Tesztelésen alapuló fejlesztés.
 
-Ezt talán úgy lehetne a legegyszerűbben bemutatni, hogy képzeljünk el egy feladatot ...
+Ezt talán úgy lehetne a legegyszerűbben bemutatni, hogy képzeljünk el egy adott problémát és próbáljuk meg visszafelé megoldani. Oké, lehet, hogy ez így elsőre hülyén hangzik, de talán ez az ábra segíthet.
+
+http://en.wikipedia.org/wiki/File:Test-driven_development.PNG 
 
 (itt ajánlanám [http://weblabor.hu/konyvek/test-driven-development-by-example Török Gábor] írását.) 
 
