@@ -1,6 +1,10 @@
-= Környezetbarát Egységtesztelés meztelencsigákkal =
+= Környezetbarát Egységtesztelés Meztelencsigákkal =
 
-#Hogyan gyártsunk Egységtesztelős programot Yii-vel (Test Driven Development)
+avagy, hogyan gyártsunk Egységtesztelős programot a *Yii*-vel.
+
+Mi ez?
+
+Ha netán a címből nem lenne eléggé egyértelmű, a következőkben Egységteszetkről lesz szó PHP-s környezetben. Ha a nyájas olvasó még nem olvasta a korábban megjelent Yiiki al'a Yii cikket, és semmilyen tapasztalata nincs a Yii keretrendszerrel, mindenképp érdemes rajta átfutni ugyanis itt nem fogunk belemenni az alapvető, _na most hogy is kezdjem?_ kérdésekbe.
 
 http://code.google.com/images/code_sm.png
 
