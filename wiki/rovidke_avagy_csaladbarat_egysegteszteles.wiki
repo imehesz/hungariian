@@ -8,7 +8,17 @@ Ha netán a címből nem lenne eléggé egyértelmű, a következőkben Egységt
 
 == Mi lesz ez? ==
 
-Egy nagyon egyszerű URL rövidítőt fogunk késziteni, mint pl a http://tinyurl.com vagy a http://vurl.me. Ha valaki nem ismerné, a lényeg az, hogy marha hosszú URL-eket lekicsinyítünk, és ha valahol egy felhasználó az általunk lekicsinyített linkre kattint, azt továbbítjuk a megfelelő oldalra.
+Egy nagyon egyszerű URL rövidítőt fogunk késziteni, mint pl a http://tinyurl.com vagy a http://vurl.me. Ha valaki nem ismerné, a lényeg az, hogy marha hosszú URL-eket lekicsinyítünk, és ha valahol egy felhasználó az általunk lekicsinyített linkre (slug, innen a név ;) ) kattint, azt továbbítjuk a megfelelő oldalra.
+
+== Bevezetés ==
+
+=== Fogalmak: ===
+
+*Test Driven Development (TDD)* - Tesztelésen alapuló fejlesztés.
+
+Ezt talán úgy lehetne a legegyszerűbben bemutatni, hogy képzeljünk el egy feladatot ...
+
+(itt ajánlanám [http://weblabor.hu/konyvek/test-driven-development-by-example Török Gábor] írását.) 
 
 http://code.google.com/images/code_sm.png
 
