@@ -87,7 +87,7 @@ Ez annyit jelent, hogy az adatbázis file-t a program nem tudta írásra megnyit
 
 == Modell ==
 
-Ha valaki nagyon bátor, az használhatja az új csodafegyvert [http://www.yiiframework.com/doc/guide/topics.gii Gii] amit a _yiic_ utódjának szán a Yii fejlsztői csapat. Tulajdonképpen egy grafikus, bongészőbarát kódgeneráló eszköz.
+Első lépésként hozzuk is létre a *Url* modellünket. Ha valaki nagyon bátor, az használhatja az új csodafegyvert [http://www.yiiframework.com/doc/guide/topics.gii Gii] amit a _yiic_ utódjának szán a Yii fejlsztői csapat. Tulajdonképpen egy grafikus, bongészőbarát kódgeneráló eszköz.
 
 {{{
 ./protected/yiic shell
