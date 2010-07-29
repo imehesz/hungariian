@@ -83,7 +83,11 @@ Itt szeretném megjegyezni, hogy többször is belefutottam a következő hibaü
 CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 8 attempt to write a readonly database
 }}}
 
-Ez annyit jelent, hogy az adatbázis file-t a program nem tudta írásra megnyitni, tehát át kell állítanunk a jogokat (ha csak a saját gépemen programozok, és nemfoglalkozok a biztonsággal, egyszerűen 777-et adok neki :) )
+Ez annyit jelent, hogy az adatbázis file-t a program nem tudta írásra megnyitni, tehát át kell állítanunk a jogokat (ha csak a saját gépemen programozok, és nem foglalkozok a biztonsággal, egyszerűen 777-et adok neki :) )
+
+= Itt a MVC =
+
+== Modell ==
 
 {{{
 ./protected/yiic shell
