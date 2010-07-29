@@ -12,6 +12,13 @@ Egy nagyon egyszerű URL rövidítőt fogunk késziteni, mint pl a http://tinyur
 
 == Bevezetés ==
 
+=== Szükséges Programok: ===
+
+- PHP 5.2.x
+- Apache (a PHP futtatásához)
+- SQLite (az egyszerűség kedvéért használjuk ezt, lehetne MySQL is)
+- Yii 1.1.3 (de elvileg működik az 1.1-es ág bármelyik csomagjával)
+
 === Fogalmak: ===
 
 *Test Driven Development (TDD)* - Tesztelésen alapuló fejlesztés.
