@@ -34,23 +34,21 @@ http://mehesz.net/downloads/ttd.png
  # Módosítsuk a kódunkat (úgy, hogy a teszt mindig sikeres maradjon!)
  # Kezdjük előlről az egészet.
 
-Ez elsőre, másodikra de talán még harmadikra is érdekesen hangozhat, de reméljük a cikk végén minden világos lesz.
-
 *Unit Test* - Egységteszt.
 
-Az egységek, komponensek tesztelése, hogy megbizonyosodjunk a működésének helyességéről. Cél, hogy feltárja nincsenek-e tévműködések, feltáratlan hibák a belső algoritmusban, adatkezelésben. A komponensek más rendszer komponensektől függetlenül vannak tesztelve. /az implementáló feladata, felelőssége/
+Az egységek, komponensek tesztelése, hogy megbizonyosodjunk a működésének helyességéről. Cél, hogy feltárja nincsenek-e tévműködések, feltáratlan hibák a belső algoritmusban, adatkezelésben. A komponensek más rendszer komponensektől függetlenül vannak tesztelve. (http://www.dcs.vein.hu/)
 
-(http://www.dcs.vein.hu/)
+Ez így elsőre, másodikra de talán még harmadikra is érdekesen hangozhat, de reméljük a cikk végén minden világos lesz.
 
 (ja, itt ajánlanám [http://weblabor.hu/konyvek/test-driven-development-by-example Török Gábor] írását.) 
 
-http://code.google.com/images/code_sm.png
-
-= Introduction =
-
 _"Ismeret az nem cselekedet, csakis cselekedet a cselekedet"_ - tdc10
 
-= Táblák =
+= Adatbázis =
+
+Mint korábban említettük, SQLite3-at fogunk használni, de gyakorlatilag bármilyen adatbázis motorral is műküdik a dolog.
+
+== Táblák ==
 
 {{{
 ++++++++++++++++++++++++++
@@ -68,6 +66,10 @@ _"Ismeret az nem cselekedet, csakis cselekedet a cselekedet"_ - tdc10
 CREATE TABLE urls (created INTEGER, id INTEGER PRIMARY KEY AUTOINCREMENT, slug varchar(50), url TEXT);
 }}}
 
+= Mélyvíz =
+
+Na, ennyi pepecselés után ugorjunk is bele a programozásba. Miután sikeresen létrehoztuk az alap alkalmazásunkat (pl: _yiic webapp rovidke_). Állítsuk is be egyből az adatbázis kapcsolatot.
+
 _protected/config/main.php_
 {{{
 ...
@@ -75,10 +77,13 @@ _protected/config/main.php_
 ...
 }}}
 
-(iras jog!)
+Itt szeretném megjegyezni, hogy többször is belefutottam a következő hibaüzenetbe (SQLite esetén, Linux-szal, lehet, hogy ez MS környezetben nem gond)
+
 {{{
 CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 8 attempt to write a readonly database
 }}}
+
+Ez annyit jelent, hogy az adatbázis file-t a program nem tudta írásra megnyitni, tehát át kell állítanunk a jogokat (ha csak a saját gépemen programozok, és nemfoglalkozok a biztonsággal, egyszerűen 777-et adok neki :) )
 
 {{{
 ./protected/yiic shell
