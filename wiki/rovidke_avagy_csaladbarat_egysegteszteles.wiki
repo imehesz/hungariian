@@ -66,8 +66,6 @@ Mint korábban említettük, SQLite3-at fogunk használni, de gyakorlatilag bár
 CREATE TABLE urls (created INTEGER, id INTEGER PRIMARY KEY AUTOINCREMENT, slug varchar(50), url TEXT);
 }}}
 
-= Mélyvíz =
-
 Na, ennyi pepecselés után ugorjunk is bele a programozásba. Miután sikeresen létrehoztuk az alap alkalmazásunkat (pl: _yiic webapp rovidke_). Állítsuk is be egyből az adatbázis kapcsolatot.
 
 _protected/config/main.php_
