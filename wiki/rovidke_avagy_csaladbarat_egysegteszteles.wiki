@@ -130,7 +130,7 @@ Azt fontos megjegyezni, hogy tesztelés közben nem egy, csak és kizárólag, a
 
 Innen jött a hibaüzenet, ugyanis a teszt adatbázisunk még nem létezik. Csináljunk is egyet ...
 
-_protected/data/rovidke.db_
+_protected/data/rovidke_test.db_
 {{{
 ++++++++++++++++++++++++++
 + urls                   +
