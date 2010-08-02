@@ -213,7 +213,7 @@ Tests: 2, Assertions: 2, Failures: 1.
 
 Jajj de remek, láthatjuk is, hogy egy darab *(F)* betűt kaptunk, ami ,a tévhitekkel ellentétben, az jelenti, hogy *FAIL* (ja, a pont *.* meg azt, hogy a teszt PASS(ED), azaz sikeresen lefutott.) Ha jobban megvizsgáljuk az üzenetet, akkor még az is kiderül, hogy _Failed asserting that <boolean:false> is true_, ami a Google fordító szerint annyit jelent, hogy _Elmulasztotta azt állítja, hogy hamis igaz_. Remélem lejön a lényeg :)
 
-
+Rengeteg ilyen "_a teszt azt állítja, hogy_" funkció létezik, ebben a példában mi csak néhányat fogunk bemutatni, használni. A teljes listáért [http://www.phpunit.de/manual/current/en/api.html#api.assert ide klikkoljatok].
 
 = Fixtures - Minta Adat =
 
