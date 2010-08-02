@@ -213,9 +213,13 @@ Tests: 2, Assertions: 2, Failures: 1.
 
 Jajj de remek, láthatjuk is, hogy egy darab *(F)* betűt kaptunk, ami ,a tévhitekkel ellentétben, az jelenti, hogy *FAIL* (ja, a pont *.* meg azt, hogy a teszt PASS(ED), azaz sikeresen lefutott.) Ha jobban megvizsgáljuk az üzenetet, akkor még az is kiderül, hogy _Failed asserting that <boolean:false> is true_, ami a Google fordító szerint annyit jelent, hogy _Elmulasztotta azt állítja, hogy hamis igaz_. Remélem lejön a lényeg :)
 
-Rengeteg ilyen "_a teszt azt állítja, hogy_" funkció létezik, ebben a példában mi csak néhányat fogunk bemutatni, használni. A teljes listáért [http://www.phpunit.de/manual/current/en/api.html#api.assert ide klikkoljatok].
+Rengeteg ilyen "_a teszt azt állítja, hogy_" funkció létezik, ebben a példában mi csak néhányat fogunk bemutatni/használni. A teljes listáért [http://www.phpunit.de/manual/current/en/api.html#api.assert ide klikkoljatok].
 
 = Fixtures - Minta Adat =
+
+Mint már korábban említettem, a "teszt csomag" egy úgynevezett adat-tömbből veszi a teszthez szükséges adatokat, most itt erről lesz szó (egy kicsit). Szerencsénkre *Yii* már létrehozta az alap könyvtárrendszert, sőt még néhány példa tömbböt is készített a _protected/tests/fixtures/urls.php_ file-ban. Pompás. 
+
+Módosítsuk is az értékeket, valahogy így:
 
 {{{
 return array(
@@ -232,14 +236,13 @@ return array(
 );
 }}}
 
-_protected/tests_
-{{{
-$phpunit unit/
-...
-  Failed asserting that <integer:2> matches expected value <integer:1>.
-...
-}}}
+Ugyan ezek az adat-tömbök elhanyagolhatóak, a teljesség kedvéért tettem ide őket.
 
+= Megint Tesztelünk =
+
+Nyissuk meg a URL teszt file-unkat: 
+
+_protected/tests/unit/UrlTest.php_
 {{{
 ...
     public function testCountAll()
@@ -249,6 +252,18 @@ $phpunit unit/
     }
 ...
 }}}
+
+A példa kedvéért itt az _assertEquals()_-t mutatom be, ami azt "_Feltételezi_", hogy a két megadott érték megegyezik. Ezzel lehet játszadozni, ha valami nem stimmel a tesztünk úgyis elbukik. Ugye milyen egyszerű?
+
+_protected/tests_
+{{{
+$phpunit unit/
+...
+  Failed asserting that <integer:2> matches expected value <integer:1>.
+...
+}}}
+
+Az assertEquals()-ba nem csak szám értéket passzolhatunk ám, hanem akár szöveges változót is:
 
 _protected/tests/unit/UrlTest.php_
 {{{
@@ -263,6 +278,8 @@ _protected/tests/unit/UrlTest.php_
 ...
 }}}
 
+ez nyilván elbubik:
+
 _protected/tests/_
 {{{
 $phpunit unit
@@ -275,12 +292,7 @@ got string      <http://altavizsla.hu>
 ...
 }}}
 
-_protected/tests/unit/UrlTest.php_
-{{{
-...
-  $url = Url::model()->findByAttributes( array( 'id' => 2 ) );
-...
-}}}
+Itt a *PHPUnit* ügyesen megmutatja nekünk, hogy pontosan hol is tértek el a szöveges változók. jajj, de jó :)
 
 _protected/tests/unit/UrlTest.php_
 {{{
