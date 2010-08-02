@@ -50,7 +50,7 @@ _"Ismeret az nem cselekedet, csakis cselekedet a cselekedet"_ - tdc10
 Mint korábban említettük, SQLite3-at fogunk használni, de gyakorlatilag bármilyen adatbázis motorral is műküdik a dolog.
 
 == Táblák ==
-
+_protected/data/rovidke.db_
 {{{
 ++++++++++++++++++++++++++
 + urls                   +
@@ -113,7 +113,7 @@ If you have a 'db' database connection, you can test these models now with:
 }}}
 
 Akiknek jobb a szeme, azok nyilván észrevették a teszt csomagot, amit a *Yii* alapból elkészít minden modellhez a _protected/tests/unit_ mappa alatt.
-Futtassuk is le "tesztjeinket" ...
+Gyakorlás képpen Futtassuk is le "tesztjeinket" (_protected/tests/_) ...
 {{{
 $phpunit unit
 ...
@@ -125,6 +125,29 @@ CDbException: The table "urls" for active record class "Url" cannot be found in 
 }}}
 
 Hoppá, hát az meg mi? Mi az, hogy nincs ilyen tábla az adatbázisban?
+
+Azt fontos megjegyezni, hogy tesztelés közben nem egy, csak és kizárólag, a teszthez írt funkciót futtatunk, hanem az éles alkalmazás kódját. Ami azt jelenti, hogy a funkció az mindig ugyanaz marad és mindig ugyanúgy fut le. Hova is akarok ezzel kilyukadni? A lényeg, hogy amikor a teszteket futtatjuk, a program egy előre legyártott adat-tömbből (_fixtures_) veszi az adatokat, ezeket egy adatbázisba teszi, lefutattja a tesztet, és törli a DB táblákban tárolt bejegyzéseket. Tehát fontos, hogy *az éles adatbázis és a teszt adatbázis* különböző legyen!
+
+Innen jött a hibaüzenet, ugyanis a teszt adatbázisunk még nem létezik. Csináljunk is egyet ...
+
+_protected/data/rovidke.db_
+{{{
+++++++++++++++++++++++++++
++ urls                   +
+++++++++++++++++++++++++++
++ id INT (auto_increment)+
++ url TEXT               +
++ slug VARCHAR(50)       +
++ created INT            +
+++++++++++++++++++++++++++
+}}}
+
+*SQLite3*
+{{{
+CREATE TABLE urls (created INTEGER, id INTEGER PRIMARY KEY AUTOINCREMENT, slug varchar(50), url TEXT);
+}}}
+
+... és módosítsuk a _teszt_(!) konfigurációs file-t az alábbiak szerint
 
 _protected/config/test.php_
 {{{
