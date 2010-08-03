@@ -236,7 +236,7 @@ return array(
 );
 }}}
 
-Ugyan ezek az adat-tömbök elhanyagolhatóak, a teljesség kedvéért tettem ide őket.
+Ugyan ezek az adat-tömbök elhanyagolhatóak, a gyakorlatban szinte mindig hasznaljuk őket.
 
 = Megint Tesztelünk =
 
@@ -278,7 +278,7 @@ _protected/tests/unit/UrlTest.php_
 ...
 }}}
 
-ez nyilván elbubik:
+ez nyilván elbubik, de ...:
 
 _protected/tests/_
 {{{
@@ -294,6 +294,8 @@ got string      <http://altavizsla.hu>
 
 Itt a *PHPUnit* ügyesen megmutatja nekünk, hogy pontosan hol is tértek el a szöveges változók. jajj, de jó :)
 
+Na most nézzünk egy kicsit komolyabb tesztet. A *urls* táblába csak olyan rekordot szertnénk elmenteni, aminek mind a *url*, mind a *slug* értéke be van állítva, tehát nem lehet üres. Írjuk meg a tesztet:
+
 _protected/tests/unit/UrlTest.php_
 {{{
 ...
@@ -304,16 +306,23 @@ _protected/tests/unit/UrlTest.php_
 ...
 }}}
 
+Ha most lefuttatnánk a tesztünket, akkor nyilvánvalóan elbukna. Szerencsénkre a *Yii* modell osztálynak van egy ún. _rules()_ (szabályok) funkciója, amivel többek között azt is beállíthatjuk, hogy mely értékek nem lehetnek üresek. Ezt a _required_-del határozhatjuk meg. 
+
 _protected/models/Url.php_
 {{{
 ...
+  public function rules()
+  {
     return array(
        ...
        array( 'url', 'required' ),
        ...
     );
+  }
 ...
 }}}
+
+A tesztünk már majdnem sikeres ;) Hasonlóan az előző példához, most állítsuk be a *slug*-ot is ...
 
 _protected/tests/unit/UrlTest.php_
 {{{
@@ -324,6 +333,8 @@ _protected/tests/unit/UrlTest.php_
     }
 ...
 }}}
+
+TESZT: FAIL!
 
 _protected/models/Url.php_
 {{{
@@ -336,7 +347,9 @@ _protected/models/Url.php_
 ...
 }}}
 
+Itt még azt is észrevehetjük, hogy milyen szépen lehet több értéket is megadni a *Yii* _rules()_ osztályának.
 
+TESZT: PASS!
 
 _protected/tests/unit/UrlTest.php_
 {{{
