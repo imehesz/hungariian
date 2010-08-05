@@ -2,7 +2,7 @@
 
 = Környezetbarát Egységtesztelés Meztelencsigákkal =
 
-summary avagy, hogyan gyártsunk Egységtesztelős programot a *Yii*-vel.
+avagy, hogyan gyártsunk Egységtesztelős programot a *Yii*-vel.
 
 == Mi ez? ==
 
