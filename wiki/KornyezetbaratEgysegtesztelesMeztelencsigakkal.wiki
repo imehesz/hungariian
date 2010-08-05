@@ -213,13 +213,13 @@ Tests: 2, Assertions: 2, Failures: 1.
 
 }}}
 
-Jajj de remek, láthatjuk is, hogy egy darab *(F)* betűt kaptunk, ami ,a tévhitekkel ellentétben, az jelenti, hogy *FAIL* (ja, a pont *.* meg azt, hogy a teszt PASS(ED), azaz sikeresen lefutott.) Ha jobban megvizsgáljuk az üzenetet, akkor még az is kiderül, hogy _Failed asserting that <boolean:false> is true_, ami a Google fordító szerint annyit jelent, hogy _Elmulasztotta azt állítja, hogy hamis igaz_. Remélem lejön a lényeg :)
+Jajj de remek, láthatjuk is, hogy egy darab *(F)* betűt kaptunk, ami a tévhitekkel ellentétben, az jelenti, hogy *FAIL* (ja, a pont *.* meg azt, hogy a teszt PASS(ED), azaz sikeresen lefutott.) Ha jobban megvizsgáljuk az üzenetet, akkor még az is kiderül, hogy _Failed asserting that <boolean:false> is true_, ami a Google fordító szerint annyit jelent, hogy _Elmulasztotta azt állítja, hogy hamis igaz_. Remélem lejön a lényeg :)
 
 Rengeteg ilyen "_a teszt azt állítja, hogy_" funkció létezik, ebben a példában mi csak néhányat fogunk bemutatni/használni. A teljes listáért [http://www.phpunit.de/manual/current/en/api.html#api.assert ide klikkoljatok].
 
 = Fixtures - Minta Adat =
 
-Mint már korábban említettem, a "teszt csomag" egy úgynevezett adat-tömbből veszi a teszthez szükséges adatokat, most itt erről lesz szó (egy kicsit). Szerencsénkre *Yii* már létrehozta az alap könyvtárrendszert, sőt még néhány példa tömbböt is készített a _protected/tests/fixtures/urls.php_ file-ban. Pompás. 
+Mint már korábban említettem, a "teszt csomag" egy úgynevezett adat-tömbből veszi a teszthez szükséges adatokat, most itt erről lesz szó (egy kicsit). Szerencsénkre *Yii* már létrehozta az alap könyvtárrendszert és a file-okat, sőt még néhány példa tömbböt is készített a _protected/tests/fixtures/urls.php_ file-ban. Pompás. 
 
 Módosítsuk is az értékeket, valahogy így:
 
@@ -353,6 +353,8 @@ Itt még azt is észrevehetjük, hogy milyen szépen lehet több értéket is me
 
 TESZT: PASS!
 
+Most nézzünk egy olyan példát, ahol a tesztelésre szánt funkció még nem létezik. Például mi történik akkor, ha egy új URL-t (inkább slug-ot) szeretnénk készíteni. Ha most próbálnánk ki a programot, akkor kézzel kéne beállítanunk a lerövidített URL-t. Na ne má ... Tehát ha az adatbázisunk üres (nincs 1 darab URL sem) akkor az első slug legyen: *AA*. Na hogy is néz ez ki pontosan?
+
 _protected/tests/unit/UrlTest.php_
 {{{
 ...
@@ -365,6 +367,8 @@ _protected/tests/unit/UrlTest.php_
     }
 ...
 }}}
+
+A tesztünk az feltételezi, hogy egy új URL esetén az új URL _slug_-ja az *AA* értékkel fog visszatérni. A teszt itt nyilván elbukik. (azt érdemes megjegyezni, hogy több _feltételezést_ is meg lehet adni 1 teszten belül). Itt jön segítségünkre, a _beforeValidate()_ beépített függvény, ami arra szolgál, hogy még a mezők ellenőrzése előtt(!) futtassunk le valamit ...
 
 _protected/models/Url.php_
 {{{
@@ -379,6 +383,8 @@ _protected/models/Url.php_
        return 'AA'; 
     }
 }}}
+
+Azért nem tudtuk itt a _beforeSave()_-et használni, mert az ellenőrző szabályunk (rule) elbukna, ugyanis a _slug_ nem lehet üres. Most csak azt akarjuk elérni, hogy a tesztünk sikeresen lefusson, ugyanis a _createSlug()_ nem adhat mindig AA értéket, pl. ha több URL-t is szeretnénk tárolni az adatbázisunkban ;). Ha most lefuttatjuk a tesztünket akkor sikeresen lefut. Jajj, de jó. Na most módosítsuk a kódunkat úgy, hogy az tényleg azt csinálja amit akarunk ...
 
 {{{
     public function createSlug()
@@ -398,6 +404,8 @@ _protected/models/Url.php_
     }
 }}}
 
+Futtassuk a tesztet ...
+
 _protected/tests/_
 {{{
 $phpunit unit/
@@ -409,6 +417,8 @@ difference      < x>
 got string      <AA>
 ...
 }}}
+
+Ez meg hogy lehet, az előbb még minden jó volt ;) Persze a fentiekből egyből kiderül, hogy a _teszt_ az *AA* értéket várta és *AC*-t kapott. Tehát módosítanunk kell a tesztünket. Itt jogosan merülhet fel a kérdés, hogy mi a ráknak ez a kerülőút? De ne feletjtsük el, tesztelünk.
 
 _protected/tests/unit/UrlTest.php_
 {{{
@@ -423,6 +433,8 @@ _protected/tests/unit/UrlTest.php_
 ...
 }}}
 
+Még itt gyorsan, mielőtt elfelejtem, a _createSlug()_-ot rövidíthetjük így is.
+
 _protected/models/Url.php_
 {{{
 ...
@@ -433,6 +445,8 @@ _protected/models/Url.php_
     }
 ...
 }}}
+
+== CRUD - Létrehoz, Megjelenít, Frissít, Töröl ==
 
 _protected/yiic shell_
 {{{
