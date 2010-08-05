@@ -1,6 +1,6 @@
 = Környezetbarát Egységtesztelés Meztelencsigákkal =
 
-avagy, hogyan gyártsunk Egységtesztelős programot a *Yii*-vel.
+#summary avagy, hogyan gyártsunk Egységtesztelős programot a *Yii*-vel.
 
 == Mi ez? ==
 
