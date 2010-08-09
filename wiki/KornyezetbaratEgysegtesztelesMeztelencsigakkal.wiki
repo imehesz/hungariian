@@ -1,5 +1,5 @@
 #summary avagy, hogyan gyártsunk Egységtesztelős programot a *Yii*-vel.
-a
+
 = Környezetbarát Egységtesztelés Meztelencsigákkal =
 
 avagy, hogyan gyártsunk Egységtesztelős programot a *Yii*-vel.
@@ -446,7 +446,11 @@ _protected/models/Url.php_
 ...
 }}}
 
-== CRUD - Létrehoz, Megjelenít, Frissít, Töröl ==
+== Kontroller és Nézet Cucc - CRUD - Létrehoz, Megjelenít, Frissít, Töröl ==
+
+Az azért remélem feltűnt, hogy még egyszer sem ellenőriztük a programot a böngészőben. Mert nincs is rá szükség. Abban azonban biztosak lehetünk, hogy a *URL* modellre vonatkozó funkcióink majdnem 100%-osak. Azért nem mondom, hogy 100%-osak, mert több mindent lehetne, sőt, kellene(!) még tesztelnünk. Pl. mi van akkor, ha frissítünk, vagy törlünk egy linket az adatbázisból stb. Ezeket a fentiek alapján, remélem, kis gondolkodás után meg lehet csinálni. De még van néhány egyéb teendőnk is mielőtt a programunkat a felhasználók karmai közé eresztenénk.
+
+Készítsük el az alap felhasználói _interfészt_ (formok, nézetek és egyebek) a _yiic_ segítségével.
 
 _protected/yiic shell_
 {{{
