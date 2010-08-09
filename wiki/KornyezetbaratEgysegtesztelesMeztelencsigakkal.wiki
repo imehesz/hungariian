@@ -448,7 +448,7 @@ _protected/models/Url.php_
 
 == Kontroller és Nézet Cucc - CRUD - Létrehoz, Megjelenít, Frissít, Töröl ==
 
-Az azért remélem feltűnt, hogy még egyszer sem ellenőriztük a programot a böngészőben. Mert nincs is rá szükség. Abban azonban biztosak lehetünk, hogy a *URL* modellre vonatkozó funkcióink majdnem 100%-osak. Azért nem mondom, hogy 100%-osak, mert több mindent lehetne, sőt, kellene(!) még tesztelnünk. Pl. mi van akkor, ha frissítünk, vagy törlünk egy linket az adatbázisból stb. Ezeket a fentiek alapján, remélem, kis gondolkodás után meg lehet csinálni. De még van néhány egyéb teendőnk is mielőtt a programunkat a felhasználók karmai közé eresztenénk.
+Az azért remélem feltűnt, hogy még egyszer sem ellenőriztük a programot a böngészőben. Mert nincs is rá szükség. Abban azonban biztosak lehetünk, hogy a *URL* modellre vonatkozó funkcióink majdnem 100%-osak. Azért nem mondom, hogy _majdnem_, mert több mindent lehetne, sőt, kellene(!) még tesztelnünk. Pl. mi van akkor, ha frissítünk, vagy törlünk egy linket az adatbázisból stb. Ezeket a fentiek alapján, remélem, kis gondolkodás után meg lehet csinálni. De még van néhány egyéb teendőnk is mielőtt a programunkat a felhasználók karmai közé eresztenénk.
 
 Készítsük el az alap felhasználói _interfészt_ (formok, nézetek és egyebek) a _yiic_ segítségével.
 
@@ -469,6 +469,8 @@ _protected/yiic shell_
 
 }}}
 
+Ha egy új felhasználó érkezik az oldalra, azt szeretnénk, hogy minden klikkolgatás nélkül készíthessen egy rövidített linket (monnyuk ez nem csak *új* felhasználókra vonatkozik). Módosítsuk az alap kontrollerünket:
+
 _protected/config/main.php_
 {{{
 ...
@@ -476,19 +478,25 @@ _protected/config/main.php_
 ...
 }}}
 
+Amikor a _Yii_ a hozzáférési szabályokat készíti, alapból a _létrehozás_ funkció (create) csak belépés után lehetséges. Ami jelen esetben nem elfogadható, hiszen mi azt szeretnénk, hogy a felhasználóink a lehető leggyorsabban létrehozhassanak rövidített linkeket. Módosítsuk tehát a 
+
 _protected/controllers/UrlController.php
 {{{
 ...
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view', 'create'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('update'),
-				'users'=>array('@'),
-			),
+   public function accessRules()
+... 
+   array('allow',  // allow all users to perform 'index' and 'view' actions
+	'actions'=>array('index','view', 'create'),
+	'users'=>array('*'),
+   ),
+   array('allow', // allow authenticated user to perform 'create' and 'update' actions
+	'actions'=>array('update'),
+	'users'=>array('@'),
+   ),
 ...
 }}}
+
+Ha most megnéznénk a kis programunkat, akkor mindenféle egyéb form mezőket látnánk, amit az okos (már tesztelt) *Modell* funkcióink szépen kitöltenek a URL mentése előtt. (pl. dátum mező, a rövidített URL azaz _slug_ mező). Tulajdonképpen csak egyetlen mezőre van szükségünk, a URL-re:
 
 _protected/views/url/_form.php_
 {{{
@@ -501,9 +509,9 @@ _protected/views/url/_form.php_
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'shortened'); ?>
-		<?php echo $form->textField($model,'shortened',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'shortened'); ?>
+		<?php echo $form->labelEx($model,'slug'); ?>
+		<?php echo $form->textField($model,'slug',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->error($model,'slug'); ?>
 	</div>
     */ 
     ?>
