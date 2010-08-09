@@ -446,7 +446,7 @@ _protected/models/Url.php_
 ...
 }}}
 
-== Kontroller és Nézet Cucc - CRUD - Létrehoz, Megjelenít, Frissít, Töröl ==
+== Vezérlő és Nézet Cucc - CRUD - Létrehoz, Megjelenít, Frissít, Töröl ==
 
 Az azért remélem feltűnt, hogy még egyszer sem ellenőriztük a programot a böngészőben. Mert nincs is rá szükség. Abban azonban biztosak lehetünk, hogy a *URL* modellre vonatkozó funkcióink majdnem 100%-osak. Azért nem mondom, hogy _majdnem_, mert több mindent lehetne, sőt, kellene(!) még tesztelnünk. Pl. mi van akkor, ha frissítünk, vagy törlünk egy linket az adatbázisból stb. Ezeket a fentiek alapján, remélem, kis gondolkodás után meg lehet csinálni. De még van néhány egyéb teendőnk is mielőtt a programunkat a felhasználók karmai közé eresztenénk.
 
@@ -524,13 +524,17 @@ _protected/views/url/_form.php_
 ...
 }}}
 
+Miután programunk elmenti az új _Url_-t, *Yii* automatikusan betölti a megjelenítő kódot (_viewAction()_). Mi azt szeretnénk, ha a felhasználónk valami ilyesmit látnának: http://rovidke.hu/QWD, és erre klikkelve (vagy a böngészőbe másolva) jutnának el az igazi _URL_-hez.
+
+Először módosítsuk a megjenítő nézetet:
+
 _protected/views/url/view.php_
 {{{
 ...
 <?php 
     echo 
         CHtml::link( 
-            'http://' . $_SERVER['SERVER_NAME'] . '/' . $model->slug, 
+            $_SERVER['SERVER_NAME'] . '/' . $model->slug, 
             $this->createUrl( '/' . $model->slug ) 
         );
 ?>
@@ -551,6 +555,8 @@ $this->widget('zii.widgets.CDetailView', array(
 ?>
 }}}
 
+No, és itt jön az alkalmazás másik érdekessége, az _átirányítás_ vagy _redirect_. Alapértelmezésben a rendszer a kapott URL alapján megpróbál egy Vezérlőt (Controller) keresni és átpasszolni a kapott változókat. Nekünk viszont az kéne, hogy ha valami ilyesmit kapunk (/QWD) akkor a program _ne_ keresse a QWD-t (nem találna!) hanem hívja meg a *Url* vezérlőt és adja át _QWD_-t mint egy változó értéket. (ugyebár a _slug_ azonosítója.) Ezt az alap konfigurációs file-ban tehetjük meg, a következő képpen (a szabályok sorrendje fontos):
+
 _protected/config/main.php_
 {{{
 ...
@@ -560,7 +566,7 @@ _protected/config/main.php_
              'rules'=>array(
                  '/<slug:[A-Z]+>' => 'url/redirect',
                  '<controller:\w+>/<id:\d+>'=>'<controller>/view',
-                 '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<act    ion>',
+                 '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
                  '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
              ),
          ),
