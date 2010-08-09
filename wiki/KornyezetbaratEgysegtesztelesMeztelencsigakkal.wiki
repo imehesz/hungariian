@@ -1,5 +1,5 @@
 #summary avagy, hogyan gyártsunk Egységtesztelős programot a *Yii*-vel.
-
+a
 = Környezetbarát Egységtesztelés Meztelencsigákkal =
 
 avagy, hogyan gyártsunk Egységtesztelős programot a *Yii*-vel.
