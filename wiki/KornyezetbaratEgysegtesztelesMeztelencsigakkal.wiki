@@ -14,7 +14,7 @@ Egy nagyon egyszerű URL rövidítőt fogunk késziteni, mint pl a http://tinyur
 
 == Bevezetés ==
 
-=== Szükséges Programok: ===
+=== Környezet: ===
 
  * PHP 5.2.x
  * Apache (a PHP futtatásához)
