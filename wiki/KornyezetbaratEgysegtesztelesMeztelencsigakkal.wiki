@@ -634,3 +634,5 @@ _protected/controllers/UrlController.php_
 Még nagyon sok mindent lehetne finomítani a programunkon, de szerintem kezdetnek ez is elég. Azt pedig nagyon remélem, hogy a *PHP* közösség (végre) felébred és használni fogja a _Teszt Alapú_ (TDD) programozást.
 
 A *Yii* legyen veletek.
+
+[http://mehesz.net/downloads/shroomnail/shroomandail.png]
