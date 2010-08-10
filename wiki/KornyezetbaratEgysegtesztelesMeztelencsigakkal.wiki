@@ -555,7 +555,7 @@ $this->widget('zii.widgets.CDetailView', array(
 ?>
 }}}
 
-No, és itt jön az alkalmazás másik érdekessége, az _átirányítás_ vagy _redirect_. Alapértelmezésben a rendszer a kapott URL alapján megpróbál egy Vezérlőt (Controller) keresni és átpasszolni a kapott változókat. Nekünk viszont az kéne, hogy ha valami ilyesmit kapunk (/QWD) akkor a program _ne_ keresse a QWD-t (nem találna!) hanem hívja meg a *Url* vezérlőt és adja át _QWD_-t mint egy változó értéket. (ugyebár a _slug_ azonosítója.) Ezt az alap konfigurációs file-ban tehetjük meg, a következő képpen (a szabályok sorrendje fontos):
+No, és itt jön az alkalmazás egy másik érdekessége, az _átirányítás_ vagy _redirect_. Alapértelmezésben a rendszer a kapott URL alapján megpróbál egy Vezérlőt (Controller) keresni és átpasszolni neki a kapott változókat. Nekünk viszont az kéne, hogy ha valami ilyesmit kapunk (/QWD) akkor a program _ne_ keresse a QWD-t (nem találna!) hanem hívja meg a *Url* vezérlőt és adja át _QWD_-t mint egy változó értéket. (ugyebár a _slug_ azonosítója.) Ezt az alap konfigurációs file-ban tehetjük meg, a következő képpen (a szabályok sorrendje fontos):
 
 _protected/config/main.php_
 {{{
@@ -572,6 +572,8 @@ _protected/config/main.php_
          ),
 ...
 }}}
+
+Persze mindez nem jöhetne létre ha nics _apache_ (.htaccess). Ha az alkalmazás ROOT könyvtárában valami oknál fogva nem lenne meg ez a file, akkor az alábbiak alapján kíszítsünk egyet.
 
 _.htaccess_
 {{{
@@ -596,6 +598,8 @@ RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^.*$ - [NC,L]
 RewriteRule ^.*$ index.php [NC,L]
 }}}
+
+Na, most már tényleg csak egy dolog van hátra, megírni magát az átirányító funkciót _actionRedirect()_
 
 _protected/controllers/UrlController.php_
 {{{
@@ -626,12 +630,7 @@ _protected/controllers/UrlController.php_
     }
 ...
 }}}
-Add your content here.
 
+Még nagyon sok mindent lehetne finomítani a programunkon, de szerintem kezdetnek ez is elég. Azt pedig nagyon remélem, hogy a *PHP* közösség (végre) felébred és használni fogja a _Teszt Alapú_ (TDD) programozást.
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+A *Yii* legyen veletek.
