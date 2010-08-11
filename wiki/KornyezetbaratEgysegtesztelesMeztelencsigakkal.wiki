@@ -240,7 +240,7 @@ Ugyan ezek az adat-tömbök elhanyagolhatóak, a gyakorlatban szinte mindig hasz
 
 = Megint Tesztelünk =
 
-Nyissuk meg a URL teszt file-unkat: 
+Nyissuk meg a *URL* teszt file-unkat és írjunk gyorsan egy számláló tesztet, ami megszámolja az összes linket a táblában: 
 
 _protected/tests/unit/UrlTest.php_
 {{{
