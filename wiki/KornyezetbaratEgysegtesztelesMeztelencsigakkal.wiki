@@ -366,7 +366,9 @@ _protected/tests/unit/UrlTest.php_
 ...
 }}}
 
-A tesztünk az feltételezi, hogy egy új URL esetén az új URL _slug_-ja az *AA* értékkel fog visszatérni. A teszt itt nyilván elbukik. (azt érdemes megjegyezni, hogy több _feltételezést_ is meg lehet adni 1 teszten belül). Itt jön segítségünkre, a _beforeValidate()_ beépített függvény, ami arra szolgál, hogy még a mezők ellenőrzése előtt(!) futtassunk le valamit ...
+A tesztünk az feltételezi, hogy egy új URL esetén az új URL _slug_-ja az *AA* értékkel fog visszatérni. A teszt itt nyilván elbukik. (azt érdemes megjegyezni, hogy több _feltételezést_ is meg lehet adni 1 teszten belül).
+
+Itt jön segítségünkre, a _beforeValidate()_ beépített függvény, ami arra szolgál, hogy még a mezők ellenőrzése előtt(!) futtassunk le valamit ...
 
 _protected/models/Url.php_
 {{{
