@@ -253,7 +253,7 @@ _protected/tests/unit/UrlTest.php_
 ...
 }}}
 
-A példa kedvéért itt az _assertEquals()_-t mutatom be, ami azt "_Feltételezi_", hogy a két megadott érték megegyezik. Ezzel lehet játszadozni, ha valami nem stimmel a tesztünk úgyis elbukik. Ugye milyen egyszerű?
+A példa kedvéért itt az _assertEquals()_-t mutatom be, ami azt "_Feltételezi_", hogy a két megadott érték megegyezik. Ezzel lehet játszadozni, ha valami nem stimmel a tesztünk úgyis elbukik. PL: 
 
 _protected/tests_
 {{{
@@ -263,7 +263,7 @@ $phpunit unit/
 ...
 }}}
 
-Az assertEquals()-ba nem csak szám értéket passzolhatunk ám, hanem akár szöveges változót is:
+Ugye milyen egyszerű? Az _assertEquals()_-ba nem csak szám értéket passzolhatunk ám, hanem akár szöveges változót is:
 
 _protected/tests/unit/UrlTest.php_
 {{{
