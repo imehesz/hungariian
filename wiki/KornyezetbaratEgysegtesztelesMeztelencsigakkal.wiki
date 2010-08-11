@@ -347,7 +347,7 @@ _protected/models/Url.php_
 ...
 }}}
 
-Itt még azt is észrevehetjük, hogy milyen szépen lehet több értéket is megadni a *Yii* _rules()_ osztályának.
+Itt még azt is észrevehetjük, hogy milyen szépen lehet több értéket is megadni a *Yii* _rules()_-ban.
 
 TESZT: PASS!
 
