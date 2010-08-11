@@ -359,7 +359,7 @@ _protected/tests/unit/UrlTest.php_
     public function testCreateUrl()
     {
         $url = new Url();
-        $url->setAttribute( 'url', 'http://altavista.hu' );
+        $url->setAttribute( 'url', 'http://altavizsla.hu' );
         $this->assertTrue( $url->save(), 'URL tarolas tesztelese' );
         $this->assertEquals( $url->slug, 'AA' );
     }
@@ -424,7 +424,7 @@ _protected/tests/unit/UrlTest.php_
     public function testCreateUrl()
     {
         $url = new Url();
-        $url->setAttribute( 'url', 'http://altavista.hu' );
+        $url->setAttribute( 'url', 'http://altavizsla.hu' );
         $this->assertTrue( $url->save(), 'URL tarolas tesztelese' );
         $this->assertEquals( $url->slug, 'AC' );
     }
