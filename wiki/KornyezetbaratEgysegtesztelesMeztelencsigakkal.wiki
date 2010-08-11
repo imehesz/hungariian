@@ -45,8 +45,6 @@ Ez így elsőre, másodikra de talán még harmadikra is érdekesen hangozhat, d
 
 (ja, itt ajánlanám [http://weblabor.hu/cikkek/php-osztalyok-egysegtesztelese Erenon] írását.) 
 
-_"Ismeret az nem cselekedet, csakis cselekedet a cselekedet"_ - tdc10
-
 = Adatbázis =
 
 Mint korábban említettük, SQLite3-at fogunk használni, de gyakorlatilag bármilyen adatbázis motorral is műküdik a dolog.
@@ -636,3 +634,5 @@ Még nagyon sok mindent lehetne finomítani a programunkon, de szerintem kezdetn
 A *Yii* legyen veletek.
 
 [http://mehesz.net/downloads/shroomnail/shroomandail.png]
+
+_"Ismeret az nem cselekedet, csakis cselekedet a cselekedet"_ - tdc10
