@@ -374,7 +374,7 @@ _protected/models/Url.php_
 {{{
     public function beforeValidate()
     {
-        $this->shortened = $this->createSlug();
+        $this->slug = $this->createSlug();
         return parent::beforeValidate();
     }
 
