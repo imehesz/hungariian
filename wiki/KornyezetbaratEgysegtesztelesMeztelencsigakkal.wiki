@@ -6,7 +6,7 @@ avagy, hogyan gyártsunk Egységtesztelős programot a *Yii*-vel.
 
 == Mi ez? ==
 
-Ha netán a címből nem lenne eléggé egyértelmű, a következőkben Egységteszetkről lesz szó PHP-s környezetben. Ha a nyájas olvasó még nem olvasta a korábban megjelent [http://weblabor.hu/cikkek/wiki-a-la-yii Yiiki al'a Yii] cikket, és semmilyen tapasztalata nincs a Yii keretrendszerrel, mindenképp érdemes rajta átfutni ugyanis itt nem fogunk belemenni az alapvető, _-Na most akkor, hogy is kezdjem?_ kérdésekbe.
+Ha netán a címből nem lenne eléggé egyértelmű, a következőkben Egységteszetkről (Unit Test) lesz szó PHP-s környezetben. Ha a nyájas olvasó még nem olvasta a korábban megjelent [http://weblabor.hu/cikkek/wiki-a-la-yii Yiiki al'a Yii] cikket, és semmilyen tapasztalata nincs a Yii keretrendszerrel, mindenképp érdemes rajta átfutni ugyanis itt nem fogunk belemenni az alapvető, _-Na most akkor, hogy is kezdjem?_ kérdésekbe.
 
 == Mi lesz ez? ==
 
