@@ -10,7 +10,7 @@ Ha netán a címből nem lenne eléggé egyértelmű, a következőkben Egységt
 
 == Mi lesz ez? ==
 
-Egy nagyon egyszerű URL rövidítőt fogunk késziteni, mint pl a http://tinyurl.com vagy a http://vurl.me. Ha valaki nem ismerné, a lényeg az, hogy marha hosszú URL-eket lekicsinyítünk, és ha valahol egy felhasználó az általunk lekicsinyített linkre (slug, innen a név ;) ) kattint, azt továbbítjuk a megfelelő oldalra.
+Egy nagyon egyszerű URL rövidítőt fogunk késziteni, mint pl a http://tinyurl.com vagy a http://vurl.me. Ha valaki nem ismerné, a lényeg az, hogy marha hosszú URL-eket lekicsinyítünk, és ha valahol egy felhasználó az általunk lekicsinyített linkre (slug) kattint, azt továbbítjuk a megfelelő oldalra.
 
 == Bevezetés ==
 
