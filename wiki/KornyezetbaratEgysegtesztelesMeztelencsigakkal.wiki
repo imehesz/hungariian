@@ -171,7 +171,7 @@ OK (1 test, 0 assertions)
 
 minden OK! Birkabőr (_Juhéjj_)!
 
-Kedvenc szövegszerkesztőnkkel nyissuk meg a _UrlTest_ a _protected/tests/unit/_ könyvtárból. Ez elvileg üres, illetve, az osztályt a *Yii* már létrehozta, és talán akad is egy példa teszt. Ha van, ha nincs, a lényeg, hogy minden teszt funkciónak a _test_ cimkével kell kezdődnie. Nem történik semmi baj, ha nem kezdjük ezzel a tesztünket, de nem fog lefutni. A gyakorlás kedvéért csináljunk is két tesztet ...
+Kedvenc szövegszerkesztőnkkel nyissuk meg a _UrlTest_ a _protected/tests/unit/_ könyvtárból (aki [http://www.vim.org VIM]-et hasznal +1 piros pontot kap). Ez elvileg üres, illetve, az osztályt a *Yii* már létrehozta, és talán akad is egy példa teszt. Ha van, ha nincs, a lényeg, hogy minden teszt funkciónak a _test_ cimkével kell kezdődnie. Nem történik semmi baj, ha nem kezdjük ezzel a tesztünket, de nem fog lefutni. A gyakorlás kedvéért csináljunk is két tesztet ...
 
 _protected/tests/unit/UrlTest.php_
 {{{
